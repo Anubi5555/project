@@ -6,6 +6,7 @@
 #include "Zvucnici.hpp"
 #include "Opsis.hpp"
 #include "Memorija.hpp"
+
 class Komp
 {
 public:
