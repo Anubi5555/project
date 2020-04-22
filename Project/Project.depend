@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1587403720 source:c:\users\drago\desktop\programi\c++\project\main.cpp
+	<iostream>
+	"Memorija.hpp"
+	"Grafika.hpp"
+
+1587404047 c:\users\drago\desktop\programi\c++\project\memorija.hpp
+
+1587404189 c:\users\drago\desktop\programi\c++\project\grafika.hpp
+
