@@ -2,14 +2,15 @@
 #define OPSIS_HPP_INCLUDED
 #include "Program.hpp"
 enum tip {windiws,linux,mac};
-enum biti {32,64};
-class Opsis:public Program
+enum biti {tupe1=32,tupe2=64};
+
+class Opsis: public Program
 {
 private:
     tip t;
     biti b;
 public:
-    Opsis(x=windiws,y=64):Program(2,kod)
+    Opsis(tip x=windiws,biti y=tupe1):Program(2,kod)
     {
         t=x;
         b=y;

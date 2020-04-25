@@ -8,12 +8,15 @@ protected:
     int zauzima;
     kategorija k;
 public:
-    Program(x=1,y=kod)
+    Program(int x=1,kategorija y=kod)
     {
         zauzima=x;
         k=y;
     }
-
+    int getzauzima()const
+    {
+        return zauzima;
+    }
 };
 
 #endif // PROGRAM_HPP_INCLUDED

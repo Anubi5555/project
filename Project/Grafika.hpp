@@ -1,6 +1,7 @@
 #ifndef GRAFIKA_HPP_INCLUDED
 #define GRAFIKA_HPP_INCLUDED
-#include <string>
+#include <iostream>
+using namespace std;
 class Grafika
 {
 private:
@@ -26,29 +27,47 @@ public:
     {
         return rez;
     }
-    void povecajrez()
+    void povecajrez(int n)
     {
-        if(rez+1>=maxrez)
+        if(rez+n>=maxrez)
         {
-            rez=rez+1;
+            rez=rez+n;
         }
         else
         {
             rez=rez;
+            cout<<"Previse povecavate rezoluciju"<<endl;
+            cout<<"Provetite koliko iznosi najveca rezolucija vase kartice"<<endl;
         }
     }
-    void smajnirez()
+    void smajnirez(int n)
     {
-        if(rez-1>=minrez)
+        if(rez-n>=minrez)
         {
-            rez=rez--;
+            rez=rez-n;
         }
         else
         {
             rez=rez;
+            cout<<"Previse smanjujete rezoluciju"<<endl;
+            cout<<"Provetite koliko iznosi najmanja rezolucija vase kartice"<<endl;
         }
+    }
+    void ispisi_grafiku(Grafika G)
+    {
+        cout<<"Maksimalna rezolucija vase kartice je:"<<G.getmax()<<endl;
+        cout<<"Trenutna rezolucija vase kartice je:"<<G.getrez()<<endl;
+        cout<<"Minimalna rezolucija vase kartice je:"<<G.getmin()<<endl;
+    }
+    void preporuci_pov(Grafika G)
+    {
+        cout<<"Trenutna rezolucija vase kartice je:"<<G.getrez()<<endl;
+        cout<<"Maksimalno mozete povecati grafiku za:"<<G.getmax()-G.getrez()<<"vrednosti"<<endl;
+    }
+     void preporuci_sma(Grafika G)
+    {
+        cout<<"Trenutna rezolucija vase kartice je:"<<G.getrez()<<endl;
+        cout<<"Maksimalno mozete smanjiti grafiku za:"<<G.getmin()-G.getmin()<<"vrednosti"<<endl;
     }
 };
-
-
 #endif // GRAFIKA_HPP_INCLUDED

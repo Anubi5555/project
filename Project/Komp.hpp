@@ -10,18 +10,14 @@
 class Komp
 {
 public:
-    Monitor M;
-    Procesor P;
-    Kuler K;
-    Zvucnici Z;
-    Opsis O;
-    Memorija M;
+    Monitor Mon;
+    Procesor Pro;
+    Kuler Kul;
+    Zvucnici Zvu;
+    Opsis Ops;
+    Memorija Mem;
 public:
-    Komp()
-    getmem()const
-    {
-        return
-    }
+
 };
 
 #endif // KOMP_HPP_INCLUDED

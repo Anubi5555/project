@@ -22,9 +22,9 @@ public:
     }
     void instaliraj(Program Q)
     {
-        if (kapacitet >= popunjeno+Q.zauzima)
+        if (kapacitet >= popunjeno+ Q.getzauzima())
         {
-            popunjeno=popunjeno+Q.zauzima;
+            popunjeno=popunjeno+Q.getzauzima();
         }
         else
         {

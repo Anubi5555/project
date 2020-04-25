@@ -20,6 +20,7 @@ int main()
     cout << USB.getK() << USB.getP() << endl;
 
     Grafika G1(3,5);
-    cout << G1.getmin();
+    cout << G1.getmin()<<endl;
+     G1.ispisi_grafiku(G1);
     return 0;
 }

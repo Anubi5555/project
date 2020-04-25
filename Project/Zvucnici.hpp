@@ -5,7 +5,7 @@ class Zvucnici
 {
 private:
     int maxzvuk;
-    int maxzvuk;
+    int minzvuk;
 public:
 
 };
