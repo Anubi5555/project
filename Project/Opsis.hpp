@@ -16,6 +16,10 @@ public:
         b=y;
 
     }
+    biti gettip()const
+    {
+        return b;
+    }
 
 
 };

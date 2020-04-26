@@ -8,7 +8,7 @@
 
 1587404189 c:\users\drago\desktop\programi\c++\project\grafika.hpp
 
-1587835062 source:c:\users\drago\desktop\programi\git\project\project\main.cpp
+1587897938 source:c:\users\drago\desktop\programi\git\project\project\main.cpp
 	<iostream>
 	<string>
 	"Memorija.hpp"
@@ -33,7 +33,8 @@
 1587834825 c:\users\drago\desktop\programi\git\project\project\monitor.hpp
 	"Ekran.hpp"
 
-1587834825 c:\users\drago\desktop\programi\git\project\project\ekran.hpp
+1587847647 c:\users\drago\desktop\programi\git\project\project\ekran.hpp
+	<iostream>
 	"Grafika.hpp"
 
 1587493586 c:\users\drago\desktop\programi\git\project\project\procesor.hpp
@@ -43,7 +44,7 @@
 
 1587834216 c:\users\drago\desktop\programi\git\project\project\zvucnici.hpp
 
-1587833377 c:\users\drago\desktop\programi\git\project\project\opsis.hpp
+1587897993 c:\users\drago\desktop\programi\git\project\project\opsis.hpp
 	"Program.hpp"
 
 1587833253 c:\users\drago\desktop\programi\git\project\project\komp.hpp

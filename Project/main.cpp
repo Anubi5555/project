@@ -27,5 +27,8 @@ int main()
      cout<<e.getosv()<<endl;
      e.povecajosv(120);
      cout<<e.getosv()<<endl;
+
+     Opsis O(linux,tupe1);
+     cout<< O.gettip();
     return 0;
 }
