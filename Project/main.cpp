@@ -34,6 +34,8 @@ int main()
      /*Funkcionalnost 1:
         Korisnik unosi programe u svoj kompijuter i ima opcije da radi svasta sa njima
        Funkcionalnost 2:
+       Korisnik menja komponente ispisuje ih menja bustuje proverava temperaturu sve sto npr radi specy
+       program plus bonus metode*/
 
     return 0;
 }
