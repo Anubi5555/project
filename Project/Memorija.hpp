@@ -1,5 +1,7 @@
 #ifndef MEMORIJA_HPP_INCLUDED
 #define MEMORIJA_HPP_INCLUDED
+#include <string>
+using namespace std;
 #include "Program.hpp"
 class Memorija
 {

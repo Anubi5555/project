@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+using namespace std;
 #include "Memorija.hpp"
 #include "Grafika.hpp"
 #include "Program.hpp"
@@ -10,8 +11,6 @@
 #include "Opsis.hpp"
 #include "Ekran.hpp"
 #include "Komp.hpp"
-using namespace std;
-
 int main()
 {
     Memorija USB(12,2);
