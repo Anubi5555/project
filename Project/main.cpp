@@ -30,5 +30,10 @@ int main()
 
      Opsis O(linux,tupe1);
      cout<< O.gettip();
+
+     /*Funkcionalnost 1:
+        Korisnik unosi programe u svoj kompijuter i ima opcije da radi svasta sa njima
+       Funkcionalnost 2:
+
     return 0;
 }
