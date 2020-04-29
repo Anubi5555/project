@@ -16,11 +16,24 @@ public:
         b=y;
 
     }
-    biti gettip()const
+    biti getbiti()const
     {
         return b;
     }
-
+    tip gettip()const
+    {
+        switch(t)
+        {
+            case 1:cout<<"windows";
+            case 2:cout<<"Linux";
+            case 3:cout<<"Mac";
+        }
+    }
+    void ispisiopsis(Opsis O)
+    {
+        cout<<"vas operativni sistem je :"<<O.gettip();
+        cout<<"ima"<<O.getbiti()<<"bita;
+    }
 
 };
 

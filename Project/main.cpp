@@ -29,7 +29,7 @@ int main()
      cout<<e.getosv()<<endl;
 
      Opsis O(linux,tupe1);
-     cout<< O.gettip();
+     cout<< O.getbiti();
 
      /*Funkcionalnost 1:
         Korisnik unosi programe u svoj kompijuter i ima opcije da radi svasta sa njima
