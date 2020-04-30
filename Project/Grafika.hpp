@@ -53,21 +53,21 @@ public:
             cout<<"Provetite koliko iznosi najmanja rezolucija vase kartice"<<endl;
         }
     }
-    void ispisi_grafiku(Grafika G)
+    void ispisi_grafiku()
     {
-        cout<<"Maksimalna rezolucija vase kartice je:"<<G.getmax()<<endl;
-        cout<<"Trenutna rezolucija vase kartice je:"<<G.getrez()<<endl;
-        cout<<"Minimalna rezolucija vase kartice je:"<<G.getmin()<<endl;
+        cout<<"Maksimalna rezolucija vase kartice je:"<<maxrez<<endl;
+        cout<<"Trenutna rezolucija vase kartice je:"<<rez<<endl;
+        cout<<"Minimalna rezolucija vase kartice je:"<<minrez<<endl;
     }
-    void preporuci_pov(Grafika G)
+    void preporuci_pov()
     {
-        cout<<"Trenutna rezolucija vase kartice je:"<<G.getrez()<<endl;
-        cout<<"Maksimalno mozete povecati grafiku za:"<<G.getmax()-G.getrez()<<"vrednosti"<<endl;
+        cout<<"Trenutna rezolucija vase kartice je:"<<rez<<endl;
+        cout<<"Maksimalno mozete povecati grafiku za:"<<maxrez-rez<<"vrednosti"<<endl;
     }
-     void preporuci_sma(Grafika G)
+     void preporuci_sma()
     {
         cout<<"Trenutna rezolucija vase kartice je:"<<G.getrez()<<endl;
-        cout<<"Maksimalno mozete smanjiti grafiku za:"<<G.getmin()-G.getmin()<<"vrednosti"<<endl;
+        cout<<"Maksimalno mozete smanjiti grafiku za:"<<rez-minrez<<"vrednosti"<<endl;
     }
 };
 #endif // GRAFIKA_HPP_INCLUDED
