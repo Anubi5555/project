@@ -25,7 +25,7 @@ public:
     {
         osvetljenje=osvetljenje+x;
     }
-    void smanjiosv(int x)
+    bool smanjiosv(int x)
     {
         if(osvetljenje-x>=0)
         {

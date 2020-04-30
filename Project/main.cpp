@@ -20,7 +20,7 @@ int main()
 
     Grafika G1(3,5);
     cout << G1.getmin()<<endl;
-     G1.ispisi_grafiku(G1);
+     G1.ispisi_grafiku();
 
      Ekran e(2,5,10,100);
      cout<<e.getosv()<<endl;

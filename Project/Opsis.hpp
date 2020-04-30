@@ -32,7 +32,7 @@ public:
     void ispisiopsis(Opsis O)
     {
         cout<<"vas operativni sistem je :"<<O.gettip();
-        cout<<"ima"<<O.getbiti()<<"bita;
+        cout<<"ima"<<O.getbiti()<<"bita";
     }
 
 };

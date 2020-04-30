@@ -66,7 +66,7 @@ public:
     }
      void preporuci_sma()
     {
-        cout<<"Trenutna rezolucija vase kartice je:"<<G.getrez()<<endl;
+        cout<<"Trenutna rezolucija vase kartice je:"<<rez<<endl;
         cout<<"Maksimalno mozete smanjiti grafiku za:"<<rez-minrez<<"vrednosti"<<endl;
     }
 };
