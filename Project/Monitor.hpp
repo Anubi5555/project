@@ -8,10 +8,12 @@ class Monitor
 private:
     Ekran e;
     stanjeMonitora s;
+    rezim R;
 public:
-    Monitor(int x=20,int k=1,int l=3,int u=10):e(k,l,u,x)
+    Monitor(int x=20,int k=1,int l=3,int u=10,rezim ff):e(k,l,u,x)
     {
         s=OFF;
+        ff=Normal;
     }
     stanjeMonitora getStanje()const
     {
