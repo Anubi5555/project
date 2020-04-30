@@ -11,7 +11,6 @@ public:
     Monitor(int x=20,int k=1,int l=3,int u=10):e(k,l,u,x)
     {
         s=OFF;
-        e.setosv(x);
     }
     stanjeMonitora getStanje()const
     {

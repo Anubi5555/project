@@ -20,7 +20,7 @@ public:
     {
         return b;
     }
-    tip gettip()const
+    void ispisitip()const
     {
         switch(t)
         {
@@ -29,10 +29,10 @@ public:
             case 3:cout<<"Mac";
         }
     }
-    void ispisiopsis(Opsis O)
+    void ispisiopsis()
     {
-        cout<<"vas operativni sistem je :"<<O.gettip();
-        cout<<"ima"<<O.getbiti()<<"bita";
+        cout<<"vas operativni sistem je :"<<ispisitip();
+        cout<<"ima"<<b<<"bita";
     }
 
 };

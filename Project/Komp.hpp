@@ -16,6 +16,7 @@ public:
     Zvucnici Zvu;
     Opsis Ops;
     Memorija Mem;
+    int programi[Mem.getK()]
 public:
 
 };
