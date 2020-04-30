@@ -69,5 +69,6 @@ public:
         cout<<"Trenutna rezolucija vase kartice je:"<<rez<<endl;
         cout<<"Maksimalno mozete smanjiti grafiku za:"<<rez-minrez<<"vrednosti"<<endl;
     }
+
 };
 #endif // GRAFIKA_HPP_INCLUDED

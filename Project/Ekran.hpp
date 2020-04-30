@@ -17,9 +17,25 @@ public:
     {
         return osvetljenje;
     }
+    int gg()const
+    {
+        return G.getrez();
+    }
+    int gm()const
+    {
+        return G.getmax();
+    }
     void setosv(int x)
     {
         osvetljenje=x;
+    }
+    void sm(int h)
+    {
+        G.smajnirez(h);
+    }
+    void pv(int j)
+    {
+        G.povecajrez(j);
     }
     void povecajosv(int x)
     {
@@ -35,6 +51,10 @@ public:
         {
             cout<<"Osvetljenje mora biti vece od nule"<<endl;
         }
+    }
+    void postaviosvetljenje(int k)
+    {
+        osvetljenje=k;
     }
 
 };
