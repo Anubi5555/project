@@ -1,6 +1,5 @@
 #ifndef EKRAN_HPP_INCLUDED
 #define EKRAN_HPP_INCLUDED
-#include <iostream>
 #include "Grafika.hpp"
 using namespace std;
 class Ekran
@@ -46,10 +45,12 @@ public:
         if(osvetljenje-x>=0)
         {
             osvetljenje=osvetljenje-x;
+            return 1;
         }
         else
         {
             cout<<"Osvetljenje mora biti vece od nule"<<endl;
+            return 5;
         }
     }
     void postaviosvetljenje(int k)

@@ -1,6 +1,5 @@
 #ifndef GRAFIKA_HPP_INCLUDED
 #define GRAFIKA_HPP_INCLUDED
-#include <iostream>
 using namespace std;
 class Grafika
 {

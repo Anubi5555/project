@@ -1,6 +1,5 @@
 #ifndef MEMORIJA_HPP_INCLUDED
 #define MEMORIJA_HPP_INCLUDED
-#include <string>
 using namespace std;
 #include "Program.hpp"
 class Memorija
@@ -38,8 +37,23 @@ public:
         kapacitet=x.kapacitet;
         popunjeno=x.popunjeno;
     }
+void citajTxt()
+    {
+        string linija;
+        ifstream fajl ("Programi.txt");
+        if (fajl.is_open())
+        {
+            while ( getline (fajl,linija) )
+            {
+              cout<<linija<<endl;
+            }
+            fajl.close();
 
+        }
+
+        else
+            cout << "Neuspesno otvoren fajl";
+    }
 };
-
 
 #endif // MEMORIJA_HPP_INCLUDED

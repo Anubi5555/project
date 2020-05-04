@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 using namespace std;
 #include "Memorija.hpp"
 #include "Grafika.hpp"
@@ -17,6 +18,7 @@ int main()
     cout << USB.getK() << USB.getP() << endl;
     USB.instaliraj(4);
     cout << USB.getK() << USB.getP() << endl;
+    USB.citajTxt();
 
     Grafika G1(3,5);
     cout << G1.getmin()<<endl;
@@ -29,6 +31,8 @@ int main()
 
      Opsis O(linux,tupe1);
      cout<< O.getbiti();
+
+
 
      /*Funkcionalnost 1:
         Korisnik unosi programe u svoj kompijuter i ima opcije da radi svasta sa njima

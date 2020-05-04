@@ -41,6 +41,7 @@
 		<Unit filename="Opsis.hpp" />
 		<Unit filename="Procesor.hpp" />
 		<Unit filename="Program.hpp" />
+		<Unit filename="Programi.txt" />
 		<Unit filename="Zvucnici.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
