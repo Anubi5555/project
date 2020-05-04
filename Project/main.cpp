@@ -3,34 +3,32 @@
 #include <fstream>
 using namespace std;
 #include "Memorija.hpp"
-#include "Grafika.hpp"
-#include "Program.hpp"
-#include "Monitor.hpp"
-#include "Procesor.hpp"
 #include "Kuler.hpp"
 #include "Zvucnici.hpp"
-#include "Opsis.hpp"
-#include "Ekran.hpp"
 #include "Komp.hpp"
 int main()
 {
+    cout<<"Klasa Memorja";
     Memorija USB(12,2);
     cout << USB.getK() << USB.getP() << endl;
     USB.instaliraj(4);
     cout << USB.getK() << USB.getP() << endl;
     USB.citajTxt();
 
+    cout<<"Klasa Grafika";
     Grafika G1(3,5);
     cout << G1.getmin()<<endl;
-     G1.ispisi_grafiku();
+    G1.ispisi_grafiku();
 
-     Ekran e(2,5,10,100);
-     cout<<e.getosv()<<endl;
-     e.povecajosv(120);
-     cout<<e.getosv()<<endl;
+    cout<<"Klasa Ekran";
+    Ekran e(2,5,10,100);
+    cout<<e.getosv()<<endl;
+    e.povecajosv(120);
+    cout<<e.getosv()<<endl;
 
-     Opsis O(linux,tupe1);
-     cout<< O.getbiti();
+    cout<<"Klasa Opsis";
+    Opsis O(linux,tupe1);
+    cout<< O.getbiti();
 
 
 
