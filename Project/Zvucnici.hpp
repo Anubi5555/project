@@ -8,6 +8,11 @@ private:
     int tzvuk;
     int minzvuk;
 public:
+    Zvucnici(int u=12,int i=50)
+    {
+        tzvuk=u;
+        minzvuk=i;
+    }
     void pojacaj(int x)
     {
         tzvuk=tzvuk+x;

@@ -10,10 +10,10 @@ private:
     stanjeMonitora s;
     rezim R;
 public:
-    Monitor(rezim ff,int x=20,int k=1,int l=3,int u=10):e(k,l,u,x)
+    Monitor(rezim ff=NORMAL,int x=20,int k=1,int l=3,int u=10):e(k,l,u,x)
     {
         s=OFF;
-        ff=NORMAL;
+        R=ff;
     }
     stanjeMonitora getStanje()const
     {

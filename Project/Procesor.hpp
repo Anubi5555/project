@@ -6,12 +6,21 @@ class Procesor
 {
 private:
     int jezgra;
-    int baseclock;
-    int boostclock;
+    double baseclock;
+    double boostclock;
     int oktemp;
     int previsetemp;
     soket S;
 public:
+    Procesor(int j=4,double b=4.3,double o=5.7,int t=65,int p=100,soket s=AM4)
+    {
+        jezgra=j;
+        baseclock=b;
+        boostclock=o;
+        oktemp=t;
+        previsetemp=p;
+        S=s;
+    }
 
 };
 

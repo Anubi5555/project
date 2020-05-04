@@ -7,6 +7,11 @@ private:
     int obicnabrzina;
     int maxbrzina;
 public:
+    Kuler(int x=100,int y=500)
+    {
+        obicnabrzina=x;
+        maxbrzina=y;
+    }
 
 };
 

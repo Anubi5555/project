@@ -18,6 +18,10 @@ public:
     Memorija Mem;
    // int programi[Mem.getK()]
 public:
+    Komp():Mon(),Pro(),Kul(),Zvu(),Ops(),Mem()
+    {
+
+    }
 
 };
 

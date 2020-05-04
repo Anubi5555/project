@@ -16,7 +16,6 @@ public:
         zauzima=x;
         k=y;
         naziv=p;
-
     }
     int getzauzima()const
     {
