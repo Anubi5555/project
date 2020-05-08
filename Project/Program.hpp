@@ -19,6 +19,10 @@ public:
         naziv=p;
         broj++;
     }
+    ~Program()
+    {
+        broj--;
+    }
     int getzauzima()const
     {
         return zauzima;
