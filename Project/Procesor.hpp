@@ -21,6 +21,14 @@ public:
         previsetemp=p;
         S=s;
     }
+    friend ostream&operator<<(ostream&izlaz,const Procesor& P)
+    {
+        izlaz<<"Procesor - ispis"<<endl;
+        izlaz<<"Broj jezgara"<<P.jezgra<<endl;
+        izlaz<<"Bazna frakvencija"<<P.baseclock<<endl;
+        izlaz<<"Pojacana frekvencija"<<P.boostclock<<endl;
+        return izlaz;
+    }
 
 };
 

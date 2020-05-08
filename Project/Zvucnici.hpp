@@ -28,6 +28,15 @@ public:
             cout<<"Zvuk mora da bude veci od 0";
         }
     }
+   friend ostream&operator<<(ostream&izlaz,const Zvucnici& z)
+    {
+        izlaz<<"Zvucnici - ispis"<<endl;
+        izlaz<<"Minimalna snaga zvucnika je :"<<z.minzvuk<<endl;
+        izlaz<<"Zvucnici su na:"<<z.tzvuk<<endl;
+
+        return izlaz;
+    }
+
 
 };
 

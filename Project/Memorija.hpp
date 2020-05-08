@@ -21,7 +21,7 @@ public:
     {
         return popunjeno;
     }
-    void instaliraj(Program Q)
+    void instaliraj(Program &Q)
     {
         if (kapacitet >= popunjeno+ Q.getzauzima())
         {

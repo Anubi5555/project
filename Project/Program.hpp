@@ -10,16 +10,22 @@ protected:
     string naziv;
     int zauzima;
     kategorija k;
+    static int broj;
 public:
     Program(int x=1,kategorija y=kod,string p="unnamed")
     {
         zauzima=x;
         k=y;
         naziv=p;
+        broj++;
     }
     int getzauzima()const
     {
         return zauzima;
+    }
+    int getbroj()const
+    {
+        return broj;
     }
     void pisiTxt(char mode='w')
     {
@@ -38,8 +44,17 @@ public:
         fajl.close();
 
     }
+   friend ostream&operator<<(ostream&izlaz,const Program& p)
+    {
+        izlaz<<"Program - ispis "<<endl;
+        izlaz<<"Naziv programa "<<p.naziv<<endl;
+        izlaz<<"Progeam zauzima "<<p.zauzima<<endl;
+        izlaz<<"Kategorija programa je: "<<p.k<<endl;
+        return izlaz;
+    }
 
 
 };
+
 
 #endif // PROGRAM_HPP_INCLUDED

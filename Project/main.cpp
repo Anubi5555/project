@@ -7,15 +7,10 @@ using namespace std;
 #include "Kuler.hpp"
 #include "Zvucnici.hpp"
 #include "Komp.hpp"
+#include "Program.hpp"
+int Program::broj=0;
 int main()
 {
-
-    cout<<"Klasa Memorja";
-    Memorija USB(12,2);
-    cout << USB.getK() << USB.getP() << endl;
-    USB.instaliraj(4);
-    cout << USB.getK() << USB.getP() << endl;
-    USB.citajTxt();
 
     cout<<"Klasa Grafika"<<endl;
     Grafika G1(3,5);
@@ -40,14 +35,27 @@ int main()
 
     cout<<"Klasa Zvucnici"<<endl;
     Zvucnici Z;
+    cout<<Z;
 
     cout<<"Klasa Procesor"<<endl;
     Procesor P;
+    cout<<P;
 
     cout<<"Klasa Komp"<<endl;
     Komp Kop;
     cout<<"Komp je kreiran"<<endl;
 
+    cout<<"Klasa Program"<<endl;
+    Program p(5,kod,"nesto");
+    cout<<p;
+    cout<<p.getbroj()<<endl;
+
+    cout<<"Klasa Memorja";
+    Memorija USB(12,2);
+    cout << USB.getK() << USB.getP() << endl;
+    USB.instaliraj(p);
+    cout << USB.getK() << USB.getP() << endl;
+    USB.citajTxt();
 
 
      /*Funkcionalnost 1:
