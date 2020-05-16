@@ -21,14 +21,17 @@ public:
     {
         return popunjeno;
     }
-    void instaliraj(Program &Q)
+    void instaliraj(int X,kategorija Y,string P)
     {
-        if (kapacitet >= popunjeno+ Q.getzauzima())
+        if (kapacitet >= popunjeno+X)
         {
-            popunjeno=popunjeno+Q.getzauzima();
+            popunjeno=popunjeno+X;
+            Program novi(X,Y,P);
+             pisiTxt('a');
         }
-        else
-        {
+        else (kapacitet <= popunjeno+X)
+        ;{
+            cout<<"Greska-Nema dovoljno prostora"<<endl;
 
         }
     }
@@ -53,6 +56,23 @@ void citajTxt()
 
         else
             cout << "Neuspesno otvoren fajl";
+    }
+    void pisiTxt(char mode='w')
+    {
+        ofstream fajl;
+        if (mode=='a')
+        {
+            fajl.open ("Programi.txt", ios_base::app);
+        }
+        else
+        {
+            fajl.open ("Programi.txt");
+        }
+        string tekst;
+        cin>>tekst;
+        fajl << tekst << endl;
+        fajl.close();
+
     }
 };
 

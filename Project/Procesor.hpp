@@ -27,6 +27,9 @@ public:
         izlaz<<"Broj jezgara"<<P.jezgra<<endl;
         izlaz<<"Bazna frakvencija"<<P.baseclock<<endl;
         izlaz<<"Pojacana frekvencija"<<P.boostclock<<endl;
+        izlaz<<"Dobra temperatura je "<<P.oktemp<<endl;
+        izlaz<<"Prevelika temperatura je "<<P.previsetemp<<endl;
+        izlaz<<"soket je : "<<P.S<<endl;
         return izlaz;
     }
 

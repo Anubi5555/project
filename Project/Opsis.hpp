@@ -11,7 +11,7 @@ private:
     tip t;
     biti b;
 public:
-    Opsis(tip x=windiws,biti y=tupe1):Program(2,kod)
+    Opsis(tip x=windiws,biti y=tupe1,string W="Windows 7"):Program(2,kod,W)
     {
         t=x;
         b=y;
@@ -26,15 +26,19 @@ public:
         switch(t)
         {
             case 1:cout<<"windows";
+                break;
             case 2:cout<<"Linux";
+                break;
             case 3:cout<<"Mac";
+                break;
         }
     }
-    void ispisiopsis()
+    void ispis ()
     {
-        cout<<"vas operativni sistem je :";
+        Program::ispis();
+        cout<<"vas operativni sistem je :"<<endl
         ispisitip();
-        cout<<"ima"<<b<<"bita";
+        cout<<"ima"<<b<<"bita"<<endl;
     }
 
 };

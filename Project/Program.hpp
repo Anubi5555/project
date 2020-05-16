@@ -2,7 +2,7 @@
 #define PROGRAM_HPP_INCLUDED
 #include "Memorija.hpp"
 #include <stdlib.h>
-enum kategorija {igrica,kod,aplikacija};
+enum kategorija {igrica=1,kod,aplikacija};
 
 class Program
 {
@@ -22,6 +22,10 @@ public:
     ~Program()
     {
         broj--;
+    }
+    string getIme()const
+    {
+        return naziv;
     }
     int getzauzima()const
     {
@@ -48,7 +52,30 @@ public:
         fajl.close();
 
     }
-   friend ostream&operator<<(ostream&izlaz,const Program& p)
+     void kat()
+    {
+        if (k==igrica)
+        {
+            cout<<"igrica";
+        }
+        else if (k==kod)
+        {
+            cout<<"kod";
+        }
+        else
+        {
+            cout<<"aplikacija";
+        }
+    }
+    virtual void ispis ()
+    {
+        cout<<"naziv programa je : "<<naziv<<endl;
+        cout<<"program zauzima je  : "<<zauzima<<endl;
+        cout<<"katrgorija progrma je : ";
+        kat();
+        cout<<endl;
+    }
+     friend ostream&operator<<(ostream&izlaz,const Program& p)
     {
         izlaz<<"Program - ispis "<<endl;
         izlaz<<"Naziv programa "<<p.naziv<<endl;

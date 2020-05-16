@@ -11,6 +11,12 @@ using namespace std;
 int Program::broj=0;
 int main()
 {
+  /*  int I;
+    cin>>I;
+    switch(I)
+    {
+        case 0:break;
+    }
 
     cout<<"Klasa Grafika"<<endl;
     Grafika G1(3,5);
@@ -26,11 +32,12 @@ int main()
     cout<<"Klasa Monitor"<<endl;
     Monitor M;
 
-    cout<<"Klasa Opsis"<<endl;
+   */ //cout<<"Klasa Opsis"<<endl;
     Opsis O(linux,tupe1);
-    cout<< O.getbiti();
+    //cout<< O.getbiti()<<endl;
+    O.ispis();
 
-    cout<<"Klasa Kuler"<<endl;
+  /*  cout<<"Klasa Kuler"<<endl;
     Kuler K(150,700);
 
     cout<<"Klasa Zvucnici"<<endl;
@@ -45,17 +52,31 @@ int main()
     Komp Kop;
     cout<<"Komp je kreiran"<<endl;
 
-    cout<<"Klasa Program"<<endl;
-    Program p(5,kod,"nesto");
-    cout<<p;
-    cout<<p.getbroj()<<endl;
+  *///  cout<<"Klasa Program"<<endl;
+    Program p(5,kod,"nesto"),p1(2,kod,"nesto drugo"),p2;
+    p.ispis();
+    cout<<endl<<endl<<endl;
+   // cout<<p;
+  //  cout<<p.getbroj()<<endl;
 
-    cout<<"Klasa Memorja";
+     cout<<"Klasa Komp"<<endl;
+    Komp Kop;
+    cout<<"Komp je kreiran"<<endl;
+    Kop.dodaj(p);
+    Kop.dodaj(p1);
+    Kop.dodaj(p2);
+    Kop.ispisprograma();
+    Kop.obrisi();
+    Kop.ispisprograma();
+    Kop.pretraga();
+
+  /*  cout<<"Klasa Memorja"<<endl;
     Memorija USB(12,2);
-    cout << USB.getK() << USB.getP() << endl;
-    USB.instaliraj(p);
-    cout << USB.getK() << USB.getP() << endl;
+    cout << USB.getK() <<" "<< USB.getP() << endl;
+    USB.instaliraj(1,kod,"ad");
+    cout << USB.getK() <<" "<< USB.getP() << endl;
     USB.citajTxt();
+
 
 
      /*Funkcionalnost 1:
@@ -63,6 +84,7 @@ int main()
        Funkcionalnost 2:
        Korisnik menja komponente ispisuje ih menja bustuje proverava temperaturu sve sto npr radi specy
        program plus bonus metode*/
+
 
     return 0;
 }
