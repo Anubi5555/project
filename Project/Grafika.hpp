@@ -68,6 +68,14 @@ public:
         cout<<"Trenutna rezolucija vase kartice je:"<<rez<<endl;
         cout<<"Maksimalno mozete smanjiti grafiku za:"<<rez-minrez<<"vrednosti"<<endl;
     }
+     friend ostream&operator<<(ostream&izlaz,const Grafika& G)
+    {
+        izlaz<<"Grafika - ispis"<<endl;
+        izlaz<<"Minimalna rezolucija je : "<<G.minrez<<endl;
+        izlaz<<"Trenutna rezolucija je : "<<G.rez<<endl;
+        izlaz<<"Maksimalna rezolucija je : "<<G.maxrez<<endl;
+        return izlaz;
+    }
 
 };
 #endif // GRAFIKA_HPP_INCLUDED

@@ -1,7 +1,7 @@
 #ifndef MONITOR_HPP_INCLUDED
 #define MONITOR_HPP_INCLUDED
 #include "Ekran.hpp"
-enum stanjeMonitora {ON, OFF, TEST, STANDBY};
+enum stanjeMonitora {ON=1, OFF, TEST, STANDBY};
 enum rezim {STEDNJAE=1,GAMEING,NORMAL};
 class Monitor
 {
@@ -51,6 +51,34 @@ public:
                 }
 
         }
+    }
+    void stanje1 ()
+    {
+        switch(s)
+        {
+        case 1:cout<<"ON"<<endl; break;
+        case 2:cout<<"OFF"<<endl; break;
+        case 3:cout<<"TEST"<<endl; break;
+        case 4:cout<<"STANDBY"<<endl; break;
+        }
+    }
+    void rezim1 ()
+    {
+        switch(R)
+        {
+        case 1:cout<<"Rezim stednje"<<endl; break;
+        case 2:cout<<"Gameing rezim"<<endl; break;
+        case 3:cout<<"Standardni rezim"<<endl; break;
+        }
+    }
+    void ispisivanje()
+    {
+      cout<<"Monitor - ispis"<<endl;
+      cout<<e;
+      cout<<"Stanje monitora je : ";
+      stanje1();
+      cout<<"Rezim monitora je : ";
+      rezim1();
     }
 
 } ;

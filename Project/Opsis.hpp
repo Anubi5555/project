@@ -36,7 +36,7 @@ public:
     void ispis ()
     {
         Program::ispis();
-        cout<<"vas operativni sistem je :"<<endl
+        cout<<"vas operativni sistem je :"<<endl;
         ispisitip();
         cout<<"ima"<<b<<"bita"<<endl;
     }

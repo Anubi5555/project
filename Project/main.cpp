@@ -28,14 +28,17 @@ int main()
     cout<<e.getosv()<<endl;
     e.povecajosv(120);
     cout<<e.getosv()<<endl;
-
-    cout<<"Klasa Monitor"<<endl;
     Monitor M;
-
-   */ //cout<<"Klasa Opsis"<<endl;
+    cout<<"Klasa Monitor"<<endl;
     Opsis O(linux,tupe1);
+
+    Program p(5,kod,"nesto"),p1(2,kod,"nesto drugo"),p2;
+      Program *P=&O;
+      p.ispis();
+    //cout<<"Klasa Opsis"<<endl;
+
     //cout<< O.getbiti()<<endl;
-    O.ispis();
+      P->ispis();
 
   /*  cout<<"Klasa Kuler"<<endl;
     Kuler K(150,700);
@@ -52,9 +55,7 @@ int main()
     Komp Kop;
     cout<<"Komp je kreiran"<<endl;
 
-  *///  cout<<"Klasa Program"<<endl;
-    Program p(5,kod,"nesto"),p1(2,kod,"nesto drugo"),p2;
-    p.ispis();
+    cout<<"Klasa Program"<<endl;
     cout<<endl<<endl<<endl;
    // cout<<p;
   //  cout<<p.getbroj()<<endl;
@@ -84,7 +85,8 @@ int main()
        Funkcionalnost 2:
        Korisnik menja komponente ispisuje ih menja bustuje proverava temperaturu sve sto npr radi specy
        program plus bonus metode*/
-
+   Monitor M;
+   M.ispisivanje();
 
     return 0;
 }

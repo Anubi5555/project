@@ -27,11 +27,14 @@ public:
         {
             popunjeno=popunjeno+X;
             Program novi(X,Y,P);
-             pisiTxt('a');
+            std::string to_string( int X );
+            string H;
+            H=P;
+             pisiTxt('a',H);
         }
-        else (kapacitet <= popunjeno+X)
-        ;{
-            cout<<"Greska-Nema dovoljno prostora"<<endl;
+        else if (kapacitet <= popunjeno+X)
+        {
+            cout<<"Greska : Nema dovoljno prostora"<<endl;
 
         }
     }
@@ -57,7 +60,7 @@ void citajTxt()
         else
             cout << "Neuspesno otvoren fajl";
     }
-    void pisiTxt(char mode='w')
+    void pisiTxt(char mode='w',string K="NONE")
     {
         ofstream fajl;
         if (mode=='a')
@@ -69,7 +72,7 @@ void citajTxt()
             fajl.open ("Programi.txt");
         }
         string tekst;
-        cin>>tekst;
+        tekst=K;
         fajl << tekst << endl;
         fajl.close();
 

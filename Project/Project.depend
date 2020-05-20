@@ -8,7 +8,7 @@
 
 1587404189 c:\users\drago\desktop\programi\c++\project\grafika.hpp
 
-1589660652 source:c:\users\drago\desktop\programi\git\project\project\main.cpp
+1589996061 source:c:\users\drago\desktop\programi\git\project\project\main.cpp
 	<iostream>
 	<string>
 	<fstream>
@@ -19,19 +19,19 @@
 	"Komp.hpp"
 	"Program.hpp"
 
-1589660651 c:\users\drago\desktop\programi\git\project\project\memorija.hpp
+1589986736 c:\users\drago\desktop\programi\git\project\project\memorija.hpp
 	"Program.hpp"
 
 1589664896 c:\users\drago\desktop\programi\git\project\project\program.hpp
 	"Memorija.hpp"
 	<stdlib.h>
 
-1588581439 c:\users\drago\desktop\programi\git\project\project\grafika.hpp
+1589987632 c:\users\drago\desktop\programi\git\project\project\grafika.hpp
 
-1588613723 c:\users\drago\desktop\programi\git\project\project\monitor.hpp
+1589996159 c:\users\drago\desktop\programi\git\project\project\monitor.hpp
 	"Ekran.hpp"
 
-1588582235 c:\users\drago\desktop\programi\git\project\project\ekran.hpp
+1589996230 c:\users\drago\desktop\programi\git\project\project\ekran.hpp
 	"Grafika.hpp"
 
 1589392444 c:\users\drago\desktop\programi\git\project\project\procesor.hpp
@@ -42,10 +42,10 @@
 1588946317 c:\users\drago\desktop\programi\git\project\project\zvucnici.hpp
 	<string>
 
-1589663403 c:\users\drago\desktop\programi\git\project\project\opsis.hpp
+1589988383 c:\users\drago\desktop\programi\git\project\project\opsis.hpp
 	"Program.hpp"
 
-1589664992 c:\users\drago\desktop\programi\git\project\project\komp.hpp
+1589996072 c:\users\drago\desktop\programi\git\project\project\komp.hpp
 	"Monitor.hpp"
 	"Procesor.hpp"
 	"Kuler.hpp"

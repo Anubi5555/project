@@ -56,6 +56,28 @@ public:
                 cout << *i << endl;
             }
     }
+     void pisiText(char mode='w',string a="NONE")
+    {
+        ofstream fajl;
+        if (mode=='a')
+        {
+            fajl.open ("Izvestaj.txt", ios_base::app);
+        }
+        else
+        {
+            fajl.open ("Izvestaj.txt");
+        }
+        string tekst;
+        tekst=a;
+        fajl << tekst << endl;
+        fajl.close();
+
+    }
+  //  void izvestaj ()
+ //   {
+  //      pisiText('a',Mon);
+
+  //  }
 
 
 
