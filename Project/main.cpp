@@ -9,6 +9,19 @@ using namespace std;
 #include "Komp.hpp"
 #include "Program.hpp"
 int Program::broj=0;
+Komp kreiranje()
+{
+    cout<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl;
+    int niz[12];
+    double db1,db2;
+    rezim x;
+    soket y;
+    tip z;
+    biti j;
+    cout<<"unos kompijutera",endl;
+    cout<<"
+
+}
 int main()
 {
     int korisnikov_broj;
@@ -16,7 +29,11 @@ int main()
     {
         cout<<"Kreiranje novog racunara"<<"  "<<"1"<<endl;
         cout<<"Dodavanje memorije"<<"  "<<"2"<<endl;
+        switch(korisnikov_broj)
+        case 1:
+        {
 
+        }
         cin>>korisnikov_broj;
     }
     while(korisnikov_broj!=0);
