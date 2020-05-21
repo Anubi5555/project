@@ -91,5 +91,7 @@ Monitor M;
     USB.instaliraj(2,kod,"nesto");
      cout << USB.getK() <<" "<< USB.getP() << endl;
  USB.citajTxt();
+    Komp K;
+
     return 0;
 }

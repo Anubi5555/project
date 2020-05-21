@@ -56,7 +56,7 @@ public:
                 cout << *i << endl;
             }
     }
-    void pisiTxt(string nazivFajla, string tekst, char mode='w')
+   void Txt(string nazivFajla,int pok, char mode='w')
 {
     ofstream fajl;
     if (mode=='a'){
@@ -64,30 +64,29 @@ public:
     }else{
         fajl.open (nazivFajla);
     }
-    fajl << tekst << endl;
-    fajl.close();
-
-}
-  /* void Txt(string nazivFajla,auto pok, char mode='w')
-{
-    ofstream fajl;
-    if (mode=='a'){
-        fajl.open (nazivFajla, ios_base::app);
-    }else{
-        fajl.open (nazivFajla);
-    }
-    fajl << *pok << endl;
-    fajl.close();
-
+    if(pok==1)
+        fajl << Mon<< endl;
+    else if(pok==2)
+        fajl << Pro<< endl;
+    else if(pok==3)
+        fajl << Kul<< endl;
+    else if(pok==4)
+        fajl <<Ops<< endl;
+    else if(pok==5)
+        fajl <<Mem<< endl;
+     fajl.close();
 }
 
     void Izvestaj()
     {
         cout<<"izvestaj racunara"<<endl;
-        Txt("izvestaj.txt",&Mon,'a');
-
+        int i;
+        for(i=1;i<6;i++)
+            Txt("Izvestaj.txt",i,'a');
+        cout<<"Ptogrami na uredjaju su";
+        ispisprograma();
     }
-*/
+
 
 
 };

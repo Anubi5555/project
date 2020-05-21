@@ -12,6 +12,13 @@ public:
         obicnabrzina=x;
         maxbrzina=y;
     }
+    friend ostream&operator<<(ostream&izlaz,const Kuler& K)
+    {
+        izlaz<<"Procesor - ispis"<<endl;
+        izlaz<<"Trenutna brzina je"<<K.obicnabrzina<<endl;
+        izlaz<<"Maksimalna brzina"<<K.maxbrzina<<endl;
+        return izlaz;
+    }
 
 };
 

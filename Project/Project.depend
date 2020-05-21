@@ -54,3 +54,49 @@
 	"Memorija.hpp"
 	<vector>
 
+1590086479 source:c:\users\racunar\desktop\project\project\main.cpp
+	<iostream>
+	<string>
+	<fstream>
+	"Ekran.hpp"
+	"Memorija.hpp"
+	"Kuler.hpp"
+	"Zvucnici.hpp"
+	"Komp.hpp"
+	"Program.hpp"
+
+1590086479 c:\users\racunar\desktop\project\project\ekran.hpp
+	"Grafika.hpp"
+
+1590086479 c:\users\racunar\desktop\project\project\grafika.hpp
+
+1590086479 c:\users\racunar\desktop\project\project\memorija.hpp
+	"Program.hpp"
+
+1590086479 c:\users\racunar\desktop\project\project\program.hpp
+	"Memorija.hpp"
+	<stdlib.h>
+
+1590086479 c:\users\racunar\desktop\project\project\kuler.hpp
+	"Procesor.hpp"
+
+1590086479 c:\users\racunar\desktop\project\project\procesor.hpp
+
+1590086479 c:\users\racunar\desktop\project\project\zvucnici.hpp
+	<string>
+
+1590086479 c:\users\racunar\desktop\project\project\komp.hpp
+	"Monitor.hpp"
+	"Procesor.hpp"
+	"Kuler.hpp"
+	"Zvucnici.hpp"
+	"Opsis.hpp"
+	"Memorija.hpp"
+	<vector>
+
+1590086479 c:\users\racunar\desktop\project\project\monitor.hpp
+	"Ekran.hpp"
+
+1590086479 c:\users\racunar\desktop\project\project\opsis.hpp
+	"Program.hpp"
+

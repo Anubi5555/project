@@ -41,7 +41,7 @@ public:
             {
                 K="aplikacija";
             }
-            M+=P+ "," + X + "," + K;
+            M=P+ "," + X + "," + K;
              pisiTxt('a',M);
         }
         else if (kapacitet <= popunjeno+X)
@@ -88,6 +88,13 @@ void citajTxt()
         fajl << tekst << endl;
         fajl.close();
 
+    }
+    friend ostream&operator<<(ostream&izlaz,const Memorija& M)
+    {
+        izlaz<<"Memorija - ispis"<<endl;
+        izlaz<<"Kapacitet diska"<<M.kapacitet<<endl;
+        izlaz<<"Popunjeno"<<M.popunjeno<<endl;
+        return izlaz;
     }
 };
 
