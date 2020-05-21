@@ -56,29 +56,38 @@ public:
                 cout << *i << endl;
             }
     }
-     void pisiText(char mode='w',string a="NONE")
+    void pisiTxt(string nazivFajla, string tekst, char mode='w')
+{
+    ofstream fajl;
+    if (mode=='a'){
+        fajl.open (nazivFajla, ios_base::app);
+    }else{
+        fajl.open (nazivFajla);
+    }
+    fajl << tekst << endl;
+    fajl.close();
+
+}
+  /* void Txt(string nazivFajla,auto pok, char mode='w')
+{
+    ofstream fajl;
+    if (mode=='a'){
+        fajl.open (nazivFajla, ios_base::app);
+    }else{
+        fajl.open (nazivFajla);
+    }
+    fajl << *pok << endl;
+    fajl.close();
+
+}
+
+    void Izvestaj()
     {
-        ofstream fajl;
-        if (mode=='a')
-        {
-            fajl.open ("Izvestaj.txt", ios_base::app);
-        }
-        else
-        {
-            fajl.open ("Izvestaj.txt");
-        }
-        string tekst;
-        tekst=a;
-        fajl << tekst << endl;
-        fajl.close();
+        cout<<"izvestaj racunara"<<endl;
+        Txt("izvestaj.txt",&Mon,'a');
 
     }
-  //  void izvestaj ()
- //   {
-  //      pisiText('a',Mon);
-
-  //  }
-
+*/
 
 
 };

@@ -27,10 +27,22 @@ public:
         {
             popunjeno=popunjeno+X;
             Program novi(X,Y,P);
-            std::string to_string( int X );
-            string H;
-            H=P;
-             pisiTxt('a',H);
+            string H,M,K;
+            M="";
+            if(Y==1)
+            {
+                K="igrica";
+            }
+            else if (Y==2)
+            {
+                K="kod";
+            }
+            else
+            {
+                K="aplikacija";
+            }
+            M+=P+ "," + X + "," + K;
+             pisiTxt('a',M);
         }
         else if (kapacitet <= popunjeno+X)
         {

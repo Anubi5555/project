@@ -72,21 +72,24 @@ int main()
     Kop.pretraga();
 
   /*  cout<<"Klasa Memorja"<<endl;
-    Memorija USB(12,2);
-    cout << USB.getK() <<" "<< USB.getP() << endl;
-    USB.instaliraj(1,kod,"ad");
-    cout << USB.getK() <<" "<< USB.getP() << endl;
-    USB.citajTxt();
 
 
+
+
+
+
+Monitor M;
+   M.ispisivanje();
 
      /*Funkcionalnost 1:
         Korisnik unosi programe u svoj kompijuter i ima opcije da radi svasta sa njima
        Funkcionalnost 2:
        Korisnik menja komponente ispisuje ih menja bustuje proverava temperaturu sve sto npr radi specy
        program plus bonus metode*/
-   Monitor M;
-   M.ispisivanje();
-
+    Memorija USB(12,2);
+    cout << USB.getK() <<" "<< USB.getP() << endl;
+    USB.instaliraj(2,kod,"nesto");
+     cout << USB.getK() <<" "<< USB.getP() << endl;
+ USB.citajTxt();
     return 0;
 }
