@@ -71,6 +71,26 @@ public:
         case 3:cout<<"Standardni rezim"<<endl; break;
         }
     }
+    string Sget()const
+    {
+        if(s==1)
+            return "ON";
+        else if (s==2)
+            return "OFF";
+        else if (s==3)
+            return "TEST";
+        else if (s==4)
+            return "STANDBY";
+    }
+    string Rget()const
+    {
+        if(R==1)
+            return "Rezim stednje";
+        else if (R==2)
+            return "Gameing rezim";
+        else if (R==3)
+            return "Standardni rezim";
+    }
     void ispisivanje()
     {
       cout<<"Monitor - ispis"<<endl;
@@ -79,6 +99,15 @@ public:
       stanje1();
       cout<<"Rezim monitora je : ";
       rezim1();
+    }
+       friend ostream&operator<<(ostream&izlaz,const Monitor& M)
+    {
+        izlaz<<"Monitor - ispis"<<endl;
+        izlaz<<"Ekran ovog monitora "<<M.e<<endl;
+        izlaz<<"stanje monitora je "<<M.Sget()<<endl;
+        izlaz<<"Rezim monitora je"<<M.Rget()<<endl;
+
+        return izlaz;
     }
 
 } ;

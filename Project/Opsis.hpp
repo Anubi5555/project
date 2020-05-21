@@ -40,6 +40,23 @@ public:
         ispisitip();
         cout<<"ima"<<b<<"bita"<<endl;
     }
+    string GGet()const
+    {
+        if (t==1)
+            return "Windows";
+        else if (t==2)
+            return "Linux";
+        else if (t==3)
+            return "Mac";
+    }
+       friend ostream&operator<<(ostream&izlaz,const Opsis& O)
+    {
+        izlaz<<"Operativni sistem - ispis"<<endl;
+        izlaz<<"Tip operativnog sistema"<<O.GGet()<<endl;
+        izlaz<<"Operativni sistem ima"<<O.getbiti()<<"bita"<<endl;
+
+        return izlaz;
+    }
 
 };
 

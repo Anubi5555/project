@@ -41,8 +41,9 @@ public:
             {
                 K="aplikacija";
             }
-            M=P+ "," + X + "," + K;
-             pisiTxt('a',M);
+            ofstream fajl;
+             fajl.open ("Programi.txt", ios_base::app);
+            fajl<< P << "," << X << "," << K << endl;
         }
         else if (kapacitet <= popunjeno+X)
         {

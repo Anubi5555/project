@@ -92,6 +92,6 @@ Monitor M;
      cout << USB.getK() <<" "<< USB.getP() << endl;
  USB.citajTxt();
     Komp K;
-
+    K.Izvestaj();
     return 0;
 }

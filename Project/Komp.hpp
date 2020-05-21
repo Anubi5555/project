@@ -60,9 +60,9 @@ public:
 {
     ofstream fajl;
     if (mode=='a'){
-        fajl.open (nazivFajla, ios_base::app);
+        fajl.open ("Izvestaj.txt", ios_base::app);
     }else{
-        fajl.open (nazivFajla);
+        fajl.open ("Izvestaj.txt");
     }
     if(pok==1)
         fajl << Mon<< endl;
@@ -76,14 +76,31 @@ public:
         fajl <<Mem<< endl;
      fajl.close();
 }
+ void pisiTxt(char mode='w',string K="NONE")
+    {
+        ofstream fajl;
+        if (mode=='a')
+        {
+            fajl.open ("Programi.txt", ios_base::app);
+        }
+        else
+        {
+            fajl.open ("Programi.txt");
+        }
+        string tekst;
+        tekst=K;
+        fajl << tekst << endl;
+        fajl.close();
+
+    }
 
     void Izvestaj()
     {
-        cout<<"izvestaj racunara"<<endl;
+        pisiTxt('w',"izvestaj kompijutera");
         int i;
         for(i=1;i<6;i++)
-            Txt("Izvestaj.txt",i,'a');
-        cout<<"Ptogrami na uredjaju su";
+            Txt("Izvestaj.txt",i,'w');
+        pisiTxt('w',"Dostupni programi su :");
         ispisprograma();
     }
 
