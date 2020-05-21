@@ -1,5 +1,3 @@
-windows7,2,kod
-League_of_legends,5,igrica
-CodeBlocks,1,aplikacija
-nesto,2,kod
-nesto,2,kod
+Windows7,2,kod
+LOL,3,igrica
+BUM,1,kod

@@ -1,3 +1,4 @@
+izvestaj kompijutera
 Monitor - ispis
 Ekran ovog monitora Ekran - ispis
 Grafika - ispis
@@ -30,35 +31,4 @@ Memorija - ispis
 Kapacitet diska10
 Popunjeno0
 
-Monitor - ispis
-Ekran ovog monitora Ekran - ispis
-Grafika - ispis
-Minimalna rezolucija je : 1
-Trenutna rezolucija je : 3
-Maksimalna rezolucija je : 10
-
-Osvetljenje je : 20
-
-stanje monitora je OFF
-Rezim monitora jeStandardni rezim
-
-Procesor - ispis
-Broj jezgara4
-Bazna frakvencija4.3
-Pojacana frekvencija5.7
-Dobra temperatura je 65
-Prevelika temperatura je 100
-soket je : 0
-
-Procesor - ispis
-Trenutna brzina je100
-Maksimalna brzina500
-
-Operativni sistem - ispis
-Tip operativnog sistemaWindows
-Operativni sistem ima32bita
-
-Memorija - ispis
-Kapacitet diska10
-Popunjeno0
-
+Dostupni programi su :
