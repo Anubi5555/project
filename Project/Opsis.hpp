@@ -15,7 +15,11 @@ public:
     {
         t=x;
         b=y;
-
+    }
+    Opsis(const Opsis &x1):Program()
+    {
+        t=x1.t;
+        b=x1.b;
     }
     biti getbiti()const
     {

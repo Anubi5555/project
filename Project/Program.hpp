@@ -19,6 +19,13 @@ public:
         naziv=p;
         broj++;
     }
+    Program(const Program &x2)
+    {
+        naziv=x2.naziv;
+        zauzima=x2.zauzima;
+        k=x2.k;
+        broj++;
+    }
     ~Program()
     {
         broj--;

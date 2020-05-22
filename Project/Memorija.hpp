@@ -21,7 +21,7 @@ public:
     {
         return popunjeno;
     }
-    void instaliraj(int X,kategorija Y,string P)
+     void instaliraj(int X,kategorija Y,string P)
     {
         if (kapacitet >= popunjeno+X)
         {
