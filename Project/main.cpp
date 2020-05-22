@@ -118,13 +118,90 @@ void obrisi_program(Komp &KK)
     KK.obrisi();
     KK.upisiprograme();
 }
+/*void pisiTxt(string nazivFajla, string tekst, char mode='a')
+{
+
+    ofstream fajl;
+    if (mode=='a'){
+        fajl.open (nazivFajla, ios_base::app);
+    }else{
+        fajl.open (nazivFajla);
+    }
+    fajl << tekst;
+    fajl.close();
+
+}
+void citajTxt(string nazivFajla)
+{
+    string linija;
+    ifstream fajl (nazivFajla.c_str());
+    if (fajl.is_open())
+    {
+        while ( getline (fajl,linija) )
+        {
+            cout << linija << '\n';
+        }
+        fajl.close();
+    }
+
+    else
+        cout << "Neuspesno otvoren fajl";
+
+}
+    vector<string> splitSen(string str, char c=',')
+{
+    string w = "";
+    vector<string> v;
+    for (auto rem : str)
+    {
+        if (rem==c)
+        {
+            v.push_back(w);
+            w="";
+        }
+        else
+        {
+            w=w+rem;
+        }
+    }
+    v.push_back(w);
+
+    return v;
+}
+    vector<string> splitFile(string nazivFajla)
+{
+    vector<string> v,line ;
+    string linija;
+    ifstream fajl (nazivFajla);
+    if (fajl.is_open())
+    {
+        while ( getline (fajl,linija) )
+        {
+            line=(splitSen(linija));
+            v.insert(v.end(), line.begin(), line.end());
+        }
+        fajl.close();
+    }
+
+    else
+        cout << "Neuspesno otvoren fajl";
+    return v;
+
+}*/
 int main()
 {
-    int korisnikov_broj;
 
-    do
+ /*   vector<string> s=splitFile("Programi.txt");
+    int korisnikov_broj;
+    for(auto i = 0; i != K.getsve().size(); i+=4)
     {
-        Komp K;
+        Program p(s[i],s[i+1],s[i+2].s[i+3]);
+        K.dodaj(p);
+    }
+ */   do
+    {
+
+        Komp K();
         cout<<"Kreiranje novog racunara"<<"  "<<"1"<<endl;
         cout<<"Dodavanje memorije"<<"  "<<"2"<<endl;
         cout<<"Upis svih dostupnih programa u fajl Programi.txt"<<"  "<<"3"<<endl;
@@ -148,6 +225,7 @@ int main()
 
     }
     while(korisnikov_broj!=0);
+
 
   //  Monitor M;
   //  M.ispisivanje();
