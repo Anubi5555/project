@@ -109,7 +109,6 @@ int Program::broj=0;
     cin>>niz[12];
     cout<<"koliko je od tog kapaciteta popunjeno"<<endl;
     cin>>niz[13];
-
     return racunar(niz[1],niz[2],niz[3],niz[4],niz[5],niz[6],niz[7],niz[8],niz[9],niz[10],niz[11],niz[12],niz[13],db1,db2,x,y,z,j,naziv);
 }*/
 void obrisi_program(Komp &KK)
@@ -118,90 +117,13 @@ void obrisi_program(Komp &KK)
     KK.obrisi();
     KK.upisiprograme();
 }
-/*void pisiTxt(string nazivFajla, string tekst, char mode='a')
-{
-
-    ofstream fajl;
-    if (mode=='a'){
-        fajl.open (nazivFajla, ios_base::app);
-    }else{
-        fajl.open (nazivFajla);
-    }
-    fajl << tekst;
-    fajl.close();
-
-}
-void citajTxt(string nazivFajla)
-{
-    string linija;
-    ifstream fajl (nazivFajla.c_str());
-    if (fajl.is_open())
-    {
-        while ( getline (fajl,linija) )
-        {
-            cout << linija << '\n';
-        }
-        fajl.close();
-    }
-
-    else
-        cout << "Neuspesno otvoren fajl";
-
-}
-    vector<string> splitSen(string str, char c=',')
-{
-    string w = "";
-    vector<string> v;
-    for (auto rem : str)
-    {
-        if (rem==c)
-        {
-            v.push_back(w);
-            w="";
-        }
-        else
-        {
-            w=w+rem;
-        }
-    }
-    v.push_back(w);
-
-    return v;
-}
-    vector<string> splitFile(string nazivFajla)
-{
-    vector<string> v,line ;
-    string linija;
-    ifstream fajl (nazivFajla);
-    if (fajl.is_open())
-    {
-        while ( getline (fajl,linija) )
-        {
-            line=(splitSen(linija));
-            v.insert(v.end(), line.begin(), line.end());
-        }
-        fajl.close();
-    }
-
-    else
-        cout << "Neuspesno otvoren fajl";
-    return v;
-
-}*/
 int main()
 {
-
- /*   vector<string> s=splitFile("Programi.txt");
     int korisnikov_broj;
-    for(auto i = 0; i != K.getsve().size(); i+=4)
-    {
-        Program p(s[i],s[i+1],s[i+2].s[i+3]);
-        K.dodaj(p);
-    }
- */   do
-    {
 
-        Komp K();
+    do
+    {
+        Komp K;
         cout<<"Kreiranje novog racunara"<<"  "<<"1"<<endl;
         cout<<"Dodavanje memorije"<<"  "<<"2"<<endl;
         cout<<"Upis svih dostupnih programa u fajl Programi.txt"<<"  "<<"3"<<endl;
@@ -225,7 +147,6 @@ int main()
 
     }
     while(korisnikov_broj!=0);
-
 
   //  Monitor M;
   //  M.ispisivanje();
