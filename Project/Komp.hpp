@@ -18,7 +18,7 @@ public:
     Memorija Mem;
     vector <Program> programi;
 public:
-    Komp(int k1=1,int k2=2,int k3=2,int k4=2,int k5=2,int k6=2,int k7=2,int k8=2,int k9=2,int k10=2,int k11=2,int k12=2,int k13=2,double d1=2,double d2=2,rezim e1=GAMEING,soket e2=AM4,tip e3=linux,biti e4=tupe1,string s1="NONE"):Mon(e1,k1,k2,k3,k4),Pro(k5,d1,d2,k6,k7,e2),Kul(k8,k9),Zvu(k10,k11),Ops(e3,e4,s1),Mem(k12,k13)
+    Komp(int k1=1,int k2=2,int k3=2,int k4=2,int k5=2,int k6=2,int k7=2,int k8=2,int k9=2,int k10=2,int k11=2,int k12=2,int k13=2,double d1=2,double d2=2,rezim e1=GAMEING,soket e2=AM4,tip e3=linux,biti e4=tupe1,string s1="Windows7"):Mon(e1,k1,k2,k3,k4),Pro(k5,d1,d2,k6,k7,e2),Kul(k8,k9),Zvu(k10,k11),Ops(e3,e4,s1),Mem(k12,k13)
     {
         dodaj(Ops);
     }
@@ -76,18 +76,14 @@ public:
     {
         for(auto i = programi.begin(); i != programi.end(); i++)
         {
-            string str="";
             ofstream fajl;
             fajl.open ("Programi.txt", ios_base::app);
-            if (fajl.is_open())
-        {
-            while ( getline (fajl,str) )
+            for(auto i = programi.begin(); i != programi.end(); i++)
             {
-              fajl<<str<<endl;
+                fajl<<*i<<endl;
             }
-            fajl.close();
 
-        }
+            fajl.close();
 
         }
     }

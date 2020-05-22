@@ -59,7 +59,7 @@ public:
         fajl.close();
 
     }
-     void kat()
+    void kat()
     {
         if (k==igrica)
         {
@@ -82,14 +82,32 @@ public:
         kat();
         cout<<endl;
     }
-     friend ostream&operator<<(ostream&izlaz,const Program& p)
+    void odredi()const
     {
-        izlaz<<"Program - ispis "<<endl;
-        izlaz<<"Naziv programa "<<p.naziv<<endl;
-        izlaz<<"Progeam zauzima "<<p.zauzima<<endl;
-        izlaz<<"Kategorija programa je: "<<p.k<<endl;
+        string L;
+        switch(k)
+        {
+        case 1:
+            cout<<"igrica";
+            break;
+        case 2:
+            cout<<"kod";
+            break;
+        case 3:
+            cout<<"aplikacija";
+            break;
+        }
+    }
+    friend ostream&operator<<(ostream&izlaz,const Program& p)
+    {
+        izlaz<<p.naziv;
+        cout<<",";
+        izlaz<<p.zauzima;
+        cout<<",";
+        p.odredi();
         return izlaz;
     }
+
 
 
 };

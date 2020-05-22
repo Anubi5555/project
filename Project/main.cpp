@@ -115,8 +115,8 @@ int Program::broj=0;
 void obrisi_program(Komp &KK)
 {
     cout<<"UPISITE NAZIV PROGRAMA KOJI ZELITE DA OBRISETE"<<endl;
-    *KK.obrisi();
-    *KK.upisiprograme();
+    KK.obrisi();
+    KK.upisiprograme();
 }
 int main()
 {
@@ -129,15 +129,21 @@ int main()
         cout<<"Dodavanje memorije"<<"  "<<"2"<<endl;
         cout<<"Upis svih dostupnih programa u fajl Programi.txt"<<"  "<<"3"<<endl;
         cout<<"Brisanje programa"<<"  "<<"4"<<endl;
+        cout<<"Da izadjete iz programa unesite 0"<<endl;
         cin>>korisnikov_broj;
-        switch(korisnikov_broj)
+        switch(korisnikov_broj){
         case 3:
         {
             K.ispisprograma();
+            cout<<endl<<endl<<endl<<endl;
+            break;
         }
         case 4:
         {
-           obrisi_program(&K);
+           obrisi_program(K);
+           break;
+        }
+
         }
 
     }
@@ -156,6 +162,5 @@ int main()
     // USB.citajTxt();
     // Komp K;
     // K.Izvestaj();
-    //GDGZRFGZFRGZGSDGZGZFFGZFDGZFGZDFGZDFGDFZG
     return 0;
 }
