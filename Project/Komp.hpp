@@ -42,7 +42,7 @@ public:
     Komp(int k1=1,int k2=2,int k3=2,int k4=2,int k5=2,int k6=2,int k7=2,int k8=2,int k9=2,int k10=2,int k11=2,int k12=12,int k13=2,double d1=2,double d2=2,rezim e1=GAMEING,soket e2=AM4,tip e3=linux,biti e4=tupe1,string s1="Windows7"):Mon(e1,k1,k2,k3,k4),Pro(k5,d1,d2,k6,k7,e2),Kul(k8,k9),Zvu(k10,k11),Ops(e3,e4,s1),Mem(k12,k13)
     {
         instalacija(2,kod,s1);
-        izfajlauvektor("Programi.txt");
+       // izfajlauvektor("Programi.txt");
     }
     vector <Program> getsve()const
     {
@@ -98,12 +98,27 @@ public:
                 cout << *i << endl;
             }
     }
+    bool prazanFile(string imeFajla){
+    ifstream myFile(imeFajla);
+    char a;
+    myFile>>a;
+    if(a=='\n')
+        return true;
+    else return false;
+}
     void upisiprograme()
     {
         for(auto i = programi.begin(); i != programi.end(); i++)
         {
             ofstream fajl;
+            if (!prazanFile("Programi.txt"))
+            {
             fajl.open ("Programi.txt", ios_base::app);
+            }
+            else
+            {
+               fajl.open ("Programi.txt");
+            }
             for(auto i = programi.begin(); i != programi.end(); i++)
             {
                 fajl<<*i<<endl;
@@ -112,6 +127,7 @@ public:
             fajl.close();
 
         }
+
     }
    void Txtss(string nazivFajla,int pok, char mode='w')
 {
