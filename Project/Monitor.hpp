@@ -15,6 +15,11 @@ public:
         s=OFF;
         R=ff;
     }
+    Monitor(const Monitor &M):e(M.e)
+    {
+        s=M.s;
+        R=M.R;
+    }
     stanjeMonitora getStanje()const
     {
         return s;

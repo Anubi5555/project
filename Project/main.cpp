@@ -128,6 +128,7 @@ int main()
         cout<<"Dodavanje memorije"<<"  "<<"2"<<endl;
         cout<<"Upis svih dostupnih programa u fajl Programi.txt"<<"  "<<"3"<<endl;
         cout<<"Brisanje programa"<<"  "<<"4"<<endl;
+        cout<<"Instalacija programa"<<"  "<<"5"<<endl;
         cout<<"Da izadjete iz programa unesite 0"<<endl;
         cin>>korisnikov_broj;
         switch(korisnikov_broj){
@@ -147,19 +148,8 @@ int main()
 
     }
     while(korisnikov_broj!=0);
+    /// napravi  vektor mrmorije u kompu
+    /// nsprsvi kondt kopijr za komp
 
-  //  Monitor M;
-  //  M.ispisivanje();
-
-    /*Funkcionalnost 1:
-       Korisnik unosi programe u svoj kompijuter i ima opcije da radi svasta sa njima
-      Funkcionalnost 2:
-      Korisnik menja komponente ispisuje ih menja bustuje proverava temperaturu sve sto npr radi specy
-      program plus bonus metode*/
-    // Memorija USB(12,2);
-    // USB.instaliraj(2,kod,"nesto");
-    // USB.citajTxt();
-    // Komp K;
-    // K.Izvestaj();
     return 0;
 }

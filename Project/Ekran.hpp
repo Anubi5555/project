@@ -12,6 +12,10 @@ public:
     {
         osvetljenje=o;
     }
+    Ekran(const Ekran &E):G(E.G)
+    {
+        osvetljenje=E.osvetljenje;
+    }
     int getosv()const
     {
         return osvetljenje;

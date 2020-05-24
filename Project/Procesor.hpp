@@ -21,6 +21,15 @@ public:
         previsetemp=p;
         S=s;
     }
+    Procesor(const Procesor &P)
+    {
+        jezgra=P.jezgra;
+        baseclock=P.baseclock;
+        boostclock=P.boostclock;
+        oktemp=P.oktemp;
+        previsetemp=P.previsetemp;
+        S=P.S;
+    }
     friend ostream&operator<<(ostream&izlaz,const Procesor& P)
     {
         izlaz<<"Procesor - ispis"<<endl;

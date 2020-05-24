@@ -14,6 +14,12 @@ public:
         rez=z;
         maxrez=y;
     }
+    Grafika (const Grafika &graph)
+    {
+        minrez=graph.minrez;
+        rez=graph.rez;
+        maxrez=graph.maxrez;
+    }
     int getmin()const
     {
         return minrez;

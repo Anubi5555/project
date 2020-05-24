@@ -82,29 +82,27 @@ public:
         kat();
         cout<<endl;
     }
-    void odredi()const
+    string odredi()const
     {
-        string L;
+        string L="";
         switch(k)
         {
-        case 1:
-            cout<<"igrica";
-            break;
-        case 2:
-            cout<<"kod";
-            break;
-        case 3:
-            cout<<"aplikacija";
-            break;
+        case 1:L="igrica";
+              break;
+        case 2:L="kod";
+              break;
+        case 3:L="aplikacija";
+              break;
         }
+        return L;
     }
     friend ostream&operator<<(ostream&izlaz,const Program& p)
     {
         izlaz<<p.naziv;
-        cout<<",";
+        izlaz<<",";
         izlaz<<p.zauzima;
-        cout<<",";
-        p.odredi();
+        izlaz<<",";
+        izlaz<<p.odredi();
         return izlaz;
     }
 
