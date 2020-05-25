@@ -1,7 +1,7 @@
 #ifndef PROCESOR_HPP_INCLUDED
 #define PROCESOR_HPP_INCLUDED
 
-enum soket {AM4,TR4,intel1,intel2};
+enum soket {AM4=1,TR4,intel1,intel2};
 class Procesor
 {
 private:
@@ -30,15 +30,30 @@ public:
         previsetemp=P.previsetemp;
         S=P.S;
     }
+    string sokeet()const
+    {
+        string g;
+        switch(S)
+        {
+            case 1:g="AM4";
+                    break;
+            case 2:g="TR4";
+                    break;
+            case 3:g="intel1";
+                    break;
+            case 4:g="intel2";
+                    break;
+        }
+        return g;
+    }
     friend ostream&operator<<(ostream&izlaz,const Procesor& P)
     {
-        izlaz<<"Procesor - ispis"<<endl;
-        izlaz<<"Broj jezgara"<<P.jezgra<<endl;
-        izlaz<<"Bazna frakvencija"<<P.baseclock<<endl;
-        izlaz<<"Pojacana frekvencija"<<P.boostclock<<endl;
+        izlaz<<"Broj jezgara "<<P.jezgra<<endl;
+        izlaz<<"Bazna frakvencija "<<P.baseclock<<endl;
+        izlaz<<"Pojacana frekvencija "<<P.boostclock<<endl;
         izlaz<<"Dobra temperatura je "<<P.oktemp<<endl;
         izlaz<<"Prevelika temperatura je "<<P.previsetemp<<endl;
-        izlaz<<"soket je : "<<P.S<<endl;
+        izlaz<<"soket je : "<<P.sokeet()<<endl;
         return izlaz;
     }
 

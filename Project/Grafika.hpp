@@ -76,7 +76,6 @@ public:
     }
      friend ostream&operator<<(ostream&izlaz,const Grafika& G)
     {
-        izlaz<<"Grafika - ispis"<<endl;
         izlaz<<"Minimalna rezolucija je : "<<G.minrez<<endl;
         izlaz<<"Trenutna rezolucija je : "<<G.rez<<endl;
         izlaz<<"Maksimalna rezolucija je : "<<G.maxrez<<endl;

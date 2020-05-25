@@ -13,6 +13,11 @@ public:
         tzvuk=u;
         minzvuk=i;
     }
+    Zvucnici(const Zvucnici &F)
+    {
+        tzvuk=F.tzvuk;
+        minzvuk=F.minzvuk;
+    }
     void pojacaj(int x)
     {
         tzvuk=tzvuk+x;

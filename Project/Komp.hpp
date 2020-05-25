@@ -9,23 +9,23 @@
 #include <vector>
 vector<string> splitSen(string str)
 {
-   string w = "";
-   vector<string> v;
-   for (auto rem : str)
-   {
-       if (rem==',')
-       {
-           v.push_back(w);
-           w="";
-       }
-       else
-       {
-           w=w+rem;
-       }
-   }
-   v.push_back(w);
+    string w = "";
+    vector<string> v;
+    for (auto rem : str)
+    {
+        if (rem==',')
+        {
+            v.push_back(w);
+            w="";
+        }
+        else
+        {
+            w=w+rem;
+        }
+    }
+    v.push_back(w);
 
-   return v;
+    return v;
 }
 
 class Komp
@@ -41,8 +41,17 @@ public:
 public:
     Komp(int k1=1,int k2=2,int k3=2,int k4=2,int k5=2,int k6=2,int k7=2,int k8=2,int k9=2,int k10=2,int k11=2,int k12=12,int k13=2,double d1=2,double d2=2,rezim e1=GAMEING,soket e2=AM4,tip e3=linux,biti e4=tupe1,string s1="Windows7"):Mon(e1,k1,k2,k3,k4),Pro(k5,d1,d2,k6,k7,e2),Kul(k8,k9),Zvu(k10,k11),Ops(e3,e4,s1),Mem(k12,k13)
     {
-        instalacija(2,kod,s1);
-       // izfajlauvektor("Programi.txt");
+        instalacija(2,kod,s1,'w');
+        izbaci(s1);
+        izfajlauvektor("Programi.txt");
+    }
+    Komp(const Komp &K):Mon(K.Mon),Pro(K.Pro),Kul(K.Kul),Zvu(K.Zvu),Ops(K.Ops),Mem(K.Mem)
+    {
+
+    }
+    string getimeo()const
+    {
+        return Ops.getimeop();
     }
     vector <Program> getsve()const
     {
@@ -52,15 +61,15 @@ public:
     {
         programi.push_back(P);
     }
-
-     void instalacija(int X,kategorija Y,string P)
+    void instalacija(int X,kategorija Y,string P, char mode)
     {
         if (Mem.getK() >= Mem.getP()+X)
         {
             Mem.setP(Mem.getP()+X);
             Program programcic(X,Y,P);
             dodaj(programcic);
-            upisiprograme();
+            if(mode== 'a'){upisiprograme('a');}
+            else{upisiprograme('w');}
         }
         else if (Mem.getK() <= Mem.getP()+X)
         {
@@ -68,13 +77,23 @@ public:
 
         }
     }
+    void izbaci(string line="")
+    {
+        fflush(stdin);
+        for(auto i = programi.begin(); i != programi.end(); i++)
+            if (i -> getIme() == line)
+            {
+                programi.erase(i);
+                return;
+            }
+    }
     void obrisi()
     {
         string line;
         fflush(stdin);
         getline(cin,line);
         for(auto i = programi.begin(); i != programi.end(); i++)
-           if (i -> getIme() == line)
+            if (i -> getIme() == line)
             {
                 programi.erase(i);
                 cout << line << " je obrisan" << endl;
@@ -84,40 +103,40 @@ public:
     }
     void ispisprograma()
     {
-         for(auto i = programi.begin(); i != programi.end(); i++)
-            cout<<*i;
+        for(auto i = programi.begin(); i != programi.end(); i++)
+            cout<<*i<<endl;
     }
     void pretraga()
     {
-         string line;
+        string line;
         fflush(stdin);
         getline(cin,line);
         for(auto i = programi.begin(); i != programi.end(); i++)
-           if (i -> getIme() == line)
+            if (i -> getIme() == line)
             {
                 cout << *i << endl;
             }
     }
-    bool prazanFile(string imeFajla){
-    ifstream myFile(imeFajla);
-    char a;
-    myFile>>a;
-    if(a=='\n')
-        return true;
-    else return false;
-}
-    void upisiprograme()
+    void izbrisisve()
     {
+        ofstream fajl;
+        fajl.open("Programi.txt");
+        fajl.close();
+    }
+
+        void upisiprograme(char mode='w')
+    {
+        izbrisisve();
         for(auto i = programi.begin(); i != programi.end(); i++)
         {
             ofstream fajl;
-            if (!prazanFile("Programi.txt"))
+            if (mode=='a')
             {
-            fajl.open ("Programi.txt", ios_base::app);
+                fajl.open ("Programi.txt", ios_base::app);
             }
             else
             {
-               fajl.open ("Programi.txt");
+                fajl.open ("Programi.txt");
             }
             for(auto i = programi.begin(); i != programi.end(); i++)
             {
@@ -129,27 +148,64 @@ public:
         }
 
     }
-   void Txtss(string nazivFajla,int pok, char mode='w')
-{
-    ofstream fajl;
-    if (mode=='a'){
-        fajl.open ("Izvestaj.txt", ios_base::app);
-    }else{
-        fajl.open ("Izvestaj.txt");
+ /*   bool prazanFajle(string nazivFajla)
+    {
+        ifstream fajl(nazivFajla);
+        string c;
+        fajl >> c;
+        cout << c;
+        if(c.empty())
+            return true;
+        else
+            return false;
     }
-    if(pok==1)
-        fajl << Mon<< endl;
-    else if(pok==2)
-        fajl << Pro<< endl;
-    else if(pok==3)
-        fajl << Kul<< endl;
-    else if(pok==4)
-        fajl <<Ops<< endl;
-    else if(pok==5)
-        fajl <<Mem<< endl;
-     fajl.close();
-}
- void pisiTxte(char mode='w',string K="NONE")
+    void upisiprograme()
+    {
+        for(auto i = programi.begin(); i != programi.end(); i++)
+        {
+            ofstream fajl;
+            if (!prazanFajle("Programi.txt"))
+            {
+                fajl.open ("Programi.txt", ios_base::app);
+            }
+            else
+            {
+                fajl.open ("Programi.txt");
+            }
+            for(auto i = programi.begin(); i != programi.end(); i++)
+            {
+                fajl<<*i<<endl;
+            }
+
+            fajl.close();
+
+        }
+
+    }
+ */   void Txtss(string nazivFajla,int pok, char mode='w')
+    {
+        ofstream fajl;
+        if (mode=='a')
+        {
+            fajl.open ("Izvestaj.txt", ios_base::app);
+        }
+        else
+        {
+            fajl.open ("Izvestaj.txt");
+        }
+        if(pok==1)
+            fajl << Mon<< endl;
+        else if(pok==2)
+            fajl << Pro<< endl;
+        else if(pok==3)
+            fajl << Kul<< endl;
+        else if(pok==4)
+            fajl <<Ops<< endl;
+        else if(pok==5)
+            fajl <<Mem<< endl;
+        fajl.close();
+    }
+    void pisiTxte(char mode='w',string K="NONE")
     {
         ofstream fajl;
         if (mode=='a')
@@ -168,13 +224,14 @@ public:
     }
     void Izvestaj()
     {
-       pisiTxte('w',"izvestaj kompijutera");
-       int i;
-       for(i=1;i<6;i++)
+        pisiTxte('w',"izvestaj kompijutera");
+        int i;
+        for(i=1; i<6; i++)
             Txtss("Izvestaj.txt",i,'a');
-       pisiTxte('a',"Dostupni programi su :");
+        pisiTxte('a',"Dostupni programi su :");
+        upisiprograme('a');
     }
-void citaajTxt()
+    void citaajTxt()
     {
         string linija;
         ifstream fajl ("Izvestaj.txt");
@@ -182,7 +239,7 @@ void citaajTxt()
         {
             while ( getline (fajl,linija) )
             {
-              cout<<linija<<endl;
+                cout<<linija<<endl;
             }
             fajl.close();
 
@@ -192,33 +249,42 @@ void citaajTxt()
             cout << "Neuspesno otvoren fajl";
     }
 
-void izfajlauvektor(string nazivFajla)
-{
-    string linija;
-    kategorija kat;
-    ifstream fajl (nazivFajla);
-    if (fajl.is_open())
+    void izfajlauvektor(string nazivFajla)
     {
-        while ( getline (fajl,linija) )
+        string linija;
+        cout<<"pokusaj 1"<<endl;
+        kategorija kat;
+        ifstream fajl (nazivFajla);
+        if (fajl.is_open())
         {
-            vector<string> rez;
-            rez = splitSen(linija);
-            if(rez[2]=="igrica"){kat=igrica;}
-            else if(rez[2]=="kod"){kat=kod;}
-            else if(rez[2]=="aplikacija"){kat=aplikacija;}
-            Program o(stoi(rez[1].c_str()),kat,rez[0]);
-            programi.push_back(o);
+            while ( getline (fajl,linija) )
+            {
+                vector<string> rez;
+                rez = splitSen(linija);
+                if(rez[2]=="igrica")
+                {
+                    kat=igrica;
+                }
+                else if(rez[2]=="kod")
+                {
+                    kat=kod;
+                }
+                else if(rez[2]=="aplikacija")
+                {
+                    kat=aplikacija;
+                }
+                Program o(stoi(rez[1].c_str()),kat,rez[0]);
+                programi.push_back(o);
+            }
+
+            fajl.close();
+
         }
 
-        fajl.close();
+        else
+            cout << "Neuspesno otvoren fajl";
 
     }
-
-    else
-        cout << "Neuspesno otvoren fajl";
-
-}
-
 };
 
 #endif // KOMP_HPP_INCLUDED

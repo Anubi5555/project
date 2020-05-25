@@ -1,34 +1,28 @@
 izvestaj kompijutera
 Monitor - ispis
-Ekran ovog monitora Ekran - ispis
-Grafika - ispis
-Minimalna rezolucija je : 1
-Trenutna rezolucija je : 3
-Maksimalna rezolucija je : 10
+Minimalna rezolucija je : 50
+Trenutna rezolucija je : 10
+Maksimalna rezolucija je : 2
 
-Osvetljenje je : 20
+Osvetljenje je 1
 
 stanje monitora je OFF
-Rezim monitora jeStandardni rezim
+Rezim monitora je Gameing rezim
 
-Procesor - ispis
-Broj jezgara4
-Bazna frakvencija4.3
-Pojacana frekvencija5.7
-Dobra temperatura je 65
-Prevelika temperatura je 100
-soket je : 0
+Broj jezgara 12
+Bazna frakvencija 12
+Pojacana frekvencija 2
+Dobra temperatura je 2
+Prevelika temperatura je 2
+soket je : TR4
 
-Procesor - ispis
-Trenutna brzina je100
-Maksimalna brzina500
+Trenutna brzina je 12
+Maksimalna brzina 2
 
-Operativni sistem - ispis
-Tip operativnog sistemaWindows
-Operativni sistem ima32bita
+Tip operativnog sistema je Linux
+Operativni sistem ima 64 bita
 
-Memorija - ispis
-Kapacitet diska10
-Popunjeno0
+Kapacitet diska7404928
+Popunjeno2
 
 Dostupni programi su :

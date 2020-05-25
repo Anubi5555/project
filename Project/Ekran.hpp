@@ -63,9 +63,8 @@ public:
     }
      friend ostream&operator<<(ostream&izlaz,const Ekran& E)
     {
-        izlaz<<"Ekran - ispis"<<endl;
         izlaz<<E.G<<endl;
-        izlaz<<"Osvetljenje je : "<<E.osvetljenje<<endl;
+        izlaz<<"Osvetljenje je "<<E.osvetljenje<<endl;
         return izlaz;
     }
 

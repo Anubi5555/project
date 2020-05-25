@@ -9,9 +9,8 @@ using namespace std;
 #include "Komp.hpp"
 #include "Program.hpp"
 int Program::broj=0;
-/*Komp kreiranje()
+Komp kreiranje()
 {
-    cout<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl;
     int niz[12];
     double db1,db2;
     rezim x;
@@ -27,12 +26,21 @@ int Program::broj=0;
     cin>>niz[0];
     switch(niz[0])
     {
-     case 1: {x=STEDNJAE;
-            break;}
-    case 2:{x=GAMEING;
-            break;}
-    case 3:{x=NORMAL;
-            break;}
+    case 1:
+    {
+        x=STEDNJAE;
+        break;
+    }
+    case 2:
+    {
+        x=GAMEING;
+        break;
+    }
+    case 3:
+    {
+        x=NORMAL;
+        break;
+    }
     }
     cout<<"unesite osvetljenost monitora u intervalu od 1 do 100"<<endl;
     cin>>niz[1];
@@ -59,14 +67,26 @@ int Program::broj=0;
     cin>>i;
     switch(i)
     {
-        case 1:{y=AM4;
-                break;}
-        case 2:{y=TR4;
-                break;}
-        case 3:{y=intel1;
-                break;}
-        case 4:{y=intel2;
-                break;}
+    case 1:
+    {
+        y=AM4;
+        break;
+    }
+    case 2:
+    {
+        y=TR4;
+        break;
+    }
+    case 3:
+    {
+        y=intel1;
+        break;
+    }
+    case 4:
+    {
+        y=intel2;
+        break;
+    }
     }
     cout<<"unesite brzinu vaseg hladnjaka"<<endl;
     cin>>niz[8];
@@ -84,12 +104,21 @@ int Program::broj=0;
     cin>>prom1;
     switch(prom1)
     {
-        case 1:{z=windiws;
-                break;}
-        case 2:{z=linux;
-                break;}
-        case 3:{z=mac;
-                break;}
+    case 1:
+    {
+        z=windiws;
+        break;
+    }
+    case 2:
+    {
+        z=linux;
+        break;
+    }
+    case 3:
+    {
+        z=mac;
+        break;
+    }
     }
     cout<<"koliko bita ima vas OS"<<endl;
     cout<<"unesite 1 ako ima 32 bita"<<endl;
@@ -97,10 +126,16 @@ int Program::broj=0;
     cin>>prom2;
     switch(prom2)
     {
-        case 1:{j=tupe1;
-                break;}
-        case 2:{j=tupe2;
-                break;}
+    case 1:
+    {
+        j=tupe1;
+        break;
+    }
+    case 2:
+    {
+        j=tupe2;
+        break;
+    }
     }
     cout<<"unesite naziv svog operativnog sistema"<<endl;
     cin>>naziv;
@@ -108,9 +143,11 @@ int Program::broj=0;
     cout<<"unesite koliko memorije ima na disku"<<endl;
     cin>>niz[12];
     cout<<"koliko je od tog kapaciteta popunjeno"<<endl;
-    cin>>niz[13];
-    return racunar(niz[1],niz[2],niz[3],niz[4],niz[5],niz[6],niz[7],niz[8],niz[9],niz[10],niz[11],niz[12],niz[13],db1,db2,x,y,z,j,naziv);
-}*/
+    int mmm;
+    cin>>mmm;
+    Komp racunar(niz[2],niz[1],niz[3],niz[4],niz[5],niz[6],niz[7],niz[8],niz[9],niz[10],niz[11],niz[12],mmm,db1,db2,x,y,z,j,naziv);
+    return racunar;
+}
 void obrisi_program(Komp &KK)
 {
     cout<<"UPISITE NAZIV PROGRAMA KOJI ZELITE DA OBRISETE"<<endl;
@@ -120,36 +157,77 @@ void obrisi_program(Komp &KK)
 int main()
 {
     int korisnikov_broj;
-
+    cout<<"Kreirajte svoj kompijuter"<<endl;
+    Komp K(kreiranje());
     do
     {
-        Komp K;
-        cout<<"Kreiranje novog racunara"<<"  "<<"1"<<endl;
-        cout<<"Dodavanje memorije"<<"  "<<"2"<<endl;
-        cout<<"Upis svih dostupnih programa u fajl Programi.txt"<<"  "<<"3"<<endl;
-        cout<<"Brisanje programa"<<"  "<<"4"<<endl;
-        cout<<"Instalacija programa"<<"  "<<"5"<<endl;
+        cout<<endl<<endl<<endl;
+        cout<<"=========================="<<endl;
+        cout<<"Dodavanje memorije"<<"  "<<"1"<<endl;
+        cout<<"Brisanje programa"<<"  "<<"2"<<endl;
+        cout<<"Instalacija programa"<<"  "<<"3"<<endl;
+        cout<<"Uvid u dostupne programe"<<"  "<<"4"<<endl;
+        cout<<"Ispis izvestaja vaseg racunara"<<"  "<<"5"<<endl;
         cout<<"Da izadjete iz programa unesite 0"<<endl;
         cin>>korisnikov_broj;
-        switch(korisnikov_broj){
+        switch(korisnikov_broj)
+        {
+        case 2:
+        {
+            obrisi_program(K);
+            break;
+        }
         case 3:
         {
-            K.ispisprograma();
-            cout<<endl<<endl<<endl<<endl;
+            cout<<"unesite naziv programa koji zelite da instalirate"<<endl;
+            string str;
+            cin>>str;
+            cout<<"ako je zeljeni program kod unesite 1"<<endl;
+            cout<<"ako je zeljeni proogram aplikacija unesite 2"<<endl;
+            cout<<"ako je zeljeni program igrica unesite 3"<<endl;
+            int a;
+            cin>>a;
+            kategorija l;
+            switch(a)
+            {
+            case 1:
+                l=kod;
+                break;
+            case 2:
+                l=aplikacija;
+                break;
+            case 3:
+                l=igrica;
+                break;
+
+            }
+            cout<<"unesite koliko vas zeljeni program zauzima"<<endl;
+            int x;
+            cin>> x;
+            K.instalacija(x,l,str,'a');
             break;
         }
         case 4:
         {
-           obrisi_program(K);
-           break;
+            cout<<"Dostupni programi na racunaru su"<<endl;
+            K.ispisprograma();
+            break;
+        }
+        case 5:
+        {
+            cout<<"Izvestaj je upisan u tekstualni fajl Izvestaj.txt"<<endl;
+            K.Izvestaj();
+            break;
         }
 
         }
+
 
     }
     while(korisnikov_broj!=0);
     /// napravi  vektor mrmorije u kompu
-    /// nsprsvi kondt kopijr za komp
+    /// instalacija posle dodavanja vektora
+    /// sredi izvestaj
 
     return 0;
 }

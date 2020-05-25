@@ -13,6 +13,11 @@ public:
         kapacitet=x;
         popunjeno=y;
     }
+    Memorija(const Memorija &x)
+    {
+        kapacitet=x.kapacitet;
+        popunjeno=x.popunjeno;
+    }
     int getK()const
     {
         return kapacitet;
@@ -55,11 +60,6 @@ public:
 
         }
     }
-    Memorija(const Memorija &x)
-    {
-        kapacitet=x.kapacitet;
-        popunjeno=x.popunjeno;
-    }
 void citajTxt()
     {
         string linija;
@@ -96,7 +96,6 @@ void citajTxt()
     }
     friend ostream&operator<<(ostream&izlaz,const Memorija& M)
     {
-        izlaz<<"Memorija - ispis"<<endl;
         izlaz<<"Kapacitet diska"<<M.kapacitet<<endl;
         izlaz<<"Popunjeno"<<M.popunjeno<<endl;
         return izlaz;

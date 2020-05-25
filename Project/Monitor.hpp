@@ -108,9 +108,9 @@ public:
        friend ostream&operator<<(ostream&izlaz,const Monitor& M)
     {
         izlaz<<"Monitor - ispis"<<endl;
-        izlaz<<"Ekran ovog monitora "<<M.e<<endl;
+        izlaz<<M.e<<endl;
         izlaz<<"stanje monitora je "<<M.Sget()<<endl;
-        izlaz<<"Rezim monitora je"<<M.Rget()<<endl;
+        izlaz<<"Rezim monitora je "<<M.Rget()<<endl;
 
         return izlaz;
     }

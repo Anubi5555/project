@@ -16,10 +16,10 @@ public:
         t=x;
         b=y;
     }
-    Opsis(const Opsis &x1):Program()
+    Opsis(tip l,biti bit,const Program &x1):Program(x1)
     {
-        t=x1.t;
-        b=x1.b;
+        t=l;
+        b=bit;
     }
     biti getbiti()const
     {
@@ -36,6 +36,10 @@ public:
             case 3:cout<<"Mac";
                 break;
         }
+    }
+    string getimeop()const
+    {
+        return naziv;
     }
     void ispis ()
     {
@@ -55,9 +59,8 @@ public:
     }
        friend ostream&operator<<(ostream&izlaz,const Opsis& O)
     {
-        izlaz<<"Operativni sistem - ispis"<<endl;
-        izlaz<<"Tip operativnog sistema"<<O.GGet()<<endl;
-        izlaz<<"Operativni sistem ima"<<O.getbiti()<<"bita"<<endl;
+        izlaz<<"Tip operativnog sistema je "<<O.GGet()<<endl;
+        izlaz<<"Operativni sistem ima "<<O.getbiti()<<" bita"<<endl;
 
         return izlaz;
     }
