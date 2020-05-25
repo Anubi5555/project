@@ -4,7 +4,7 @@ Minimalna rezolucija je : 1
 Trenutna rezolucija je : 2
 Maksimalna rezolucija je : 10
 
-Osvetljenje je 22
+Osvetljenje je 2
 
 stanje monitora je OFF
 Rezim monitora je Gameing rezim
@@ -20,12 +20,14 @@ Trenutna brzina je 2
 Maksimalna brzina 2
 
 minimalna snaga zvucnika je :2
-Zvucnici su na:22
+Zvucnici su na:2
 
-Tip operativnog sistema je Windows
+Tip operativnog sistema je Linux
 Operativni sistem ima 64 bita
 
 Kapacitet diska 7404928
-Popunjeno 2
+Popunjeno 14
 
 Dostupni programi su :
+x,2,kod
+c,12,aplikacija

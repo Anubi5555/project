@@ -153,8 +153,6 @@ public:
           void upisiprogramei(char mode='w')
     {
         izbrisisve();
-        for(auto i = programi.begin(); i != programi.end(); i++)
-        {
             ofstream fajl;
             if (mode=='a')
             {
@@ -171,7 +169,7 @@ public:
 
             fajl.close();
 
-        }
+
 
     }
     void Txtss(string nazivFajla,int pok, char mode='w')
@@ -223,7 +221,7 @@ public:
         for(i=1; i<7; i++)
             Txtss("Izvestaj.txt",i,'a');
         pisiTxte('a',"Dostupni programi su :");
-        upisiprograme('a');
+        upisiprogramei('a');
     }
     void citaajTxt()
     {
