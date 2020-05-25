@@ -1,25 +1,25 @@
 izvestaj kompijutera
 Monitor - ispis
-Minimalna rezolucija je : 50
-Trenutna rezolucija je : 10
-Maksimalna rezolucija je : 2
+Minimalna rezolucija je : 10
+Trenutna rezolucija je : 6
+Maksimalna rezolucija je : 1
 
-Osvetljenje je 1
+Osvetljenje je 50
 
 stanje monitora je OFF
 Rezim monitora je Gameing rezim
 
 Broj jezgara 12
-Bazna frakvencija 12
-Pojacana frekvencija 2
-Dobra temperatura je 2
-Prevelika temperatura je 2
-soket je : TR4
+Bazna frakvencija 3.4
+Pojacana frekvencija 5.6
+Dobra temperatura je 60
+Prevelika temperatura je 100
+soket je : AM4
 
 Trenutna brzina je 12
-Maksimalna brzina 2
+Maksimalna brzina 20
 
-Tip operativnog sistema je Linux
+Tip operativnog sistema je Windows
 Operativni sistem ima 64 bita
 
 Kapacitet diska7404928

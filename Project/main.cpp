@@ -145,7 +145,7 @@ Komp kreiranje()
     cout<<"koliko je od tog kapaciteta popunjeno"<<endl;
     int mmm;
     cin>>mmm;
-    Komp racunar(niz[2],niz[1],niz[3],niz[4],niz[5],niz[6],niz[7],niz[8],niz[9],niz[10],niz[11],niz[12],mmm,db1,db2,x,y,z,j,naziv);
+    Komp racunar(niz[1],niz[4],niz[3],niz[2],niz[5],niz[6],niz[7],niz[8],niz[9],niz[10],niz[11],niz[12],mmm,db1,db2,x,y,z,j,naziv);
     return racunar;
 }
 void obrisi_program(Komp &KK)
