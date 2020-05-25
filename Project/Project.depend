@@ -54,7 +54,7 @@
 	"Memorija.hpp"
 	<vector>
 
-1590433137 source:c:\users\racunar\desktop\project\project\main.cpp
+1590447229 source:c:\users\racunar\desktop\project\project\main.cpp
 	<iostream>
 	<string>
 	<fstream>
@@ -68,12 +68,12 @@
 1590391808 c:\users\racunar\desktop\project\project\ekran.hpp
 	"Grafika.hpp"
 
-1590391808 c:\users\racunar\desktop\project\project\grafika.hpp
+1590447807 c:\users\racunar\desktop\project\project\grafika.hpp
 
-1590430113 c:\users\racunar\desktop\project\project\memorija.hpp
+1590447807 c:\users\racunar\desktop\project\project\memorija.hpp
 	"Program.hpp"
 
-1590436712 c:\users\racunar\desktop\project\project\program.hpp
+1590447835 c:\users\racunar\desktop\project\project\program.hpp
 	"Memorija.hpp"
 	<stdlib.h>
 
@@ -85,7 +85,7 @@
 1590406483 c:\users\racunar\desktop\project\project\zvucnici.hpp
 	<string>
 
-1590437543 c:\users\racunar\desktop\project\project\komp.hpp
+1590447107 c:\users\racunar\desktop\project\project\komp.hpp
 	"Monitor.hpp"
 	"Procesor.hpp"
 	"Kuler.hpp"
@@ -94,9 +94,9 @@
 	"Memorija.hpp"
 	<vector>
 
-1590391808 c:\users\racunar\desktop\project\project\monitor.hpp
+1590447883 c:\users\racunar\desktop\project\project\monitor.hpp
 	"Ekran.hpp"
 
-1590430164 c:\users\racunar\desktop\project\project\opsis.hpp
+1590447310 c:\users\racunar\desktop\project\project\opsis.hpp
 	"Program.hpp"
 

@@ -9,9 +9,10 @@ using namespace std;
 #include "Komp.hpp"
 #include "Program.hpp"
 int Program::broj=0;
+
 Komp kreiranje()
 {
-    int niz[11];
+    int niz[12];
     double db1,db2;
     rezim x;
     soket y;
@@ -139,9 +140,9 @@ Komp kreiranje()
     }
     int a;
     cout<<"unesite 1 da instalirate u Programi.txt"<<endl;
-            cout<<"unesite 2 da instalirate u Particija1.txt"<<endl;
-            cout<<"unesite 3 da instalirate u particija2.txt"<<endl;
-            cin>>a;
+    cout<<"unesite 2 da instalirate u Particija1.txt"<<endl;
+    cout<<"unesite 3 da instalirate u Particija2.txt"<<endl;
+    cin>>a;
     cout<<"unesite naziv svog operativnog sistema"<<endl;
     cin>>naziv;
     Komp racunar(a,niz[1],niz[2],niz[4],niz[3],niz[5],niz[6],niz[7],niz[8],niz[9],niz[10],niz[11],db1,db2,x,y,z,j,naziv);
@@ -165,8 +166,7 @@ int main()
         cout<<"Brisanje programa"<<"  "<<"1"<<endl;
         cout<<"Instalacija programa"<<"  "<<"2"<<endl;
         cout<<"Uvid u dostupne programe"<<"  "<<"3"<<endl;
-        cout<<"Ispis izvestaja vaseg racunara"<<"  "<<"4"<<endl;
-        cout<<"Da izadjete iz programa unesite 0"<<endl;
+        cout<<"Da izadjete iz programa i generisete izvestaj unesite 0"<<endl;
         cin>>korisnikov_broj;
         switch(korisnikov_broj)
         {
@@ -202,11 +202,10 @@ int main()
             cout<<"unesite koliko vas zeljeni program zauzima"<<endl;
             int x;
             cin>> x;
-            int m;
             string nazivfajla;
             cout<<"unesite 1 da instalirate u Programi.txt"<<endl;
             cout<<"unesite 2 da instalirate u Particija1.txt"<<endl;
-            cout<<"unesite 3 da instalirate u particija2.txt"<<endl;
+            cout<<"unesite 3 da instalirate u Particija2.txt"<<endl;
             cin>>a;
             K.instalacija(x,l,str,'a',a-1);
             break;
@@ -217,21 +216,9 @@ int main()
             K.ispisprograma();
             break;
         }
-        case 4:
-        {
-            cout<<"Izvestaj je upisan u tekstualni fajl Izvestaj.txt"<<endl;
-            K.Izvestaj();
-            break;
         }
-
-        }
-
-
-    }
-    while(korisnikov_broj!=0);
-    /// napravi  vektor mrmorije u kompu
-    /// instalacija posle dodavanja vektora
-    /// sredi izvestaj
-
+    }while(korisnikov_broj!=0);
+    cout<<"Izvestaj je upisan u tekstualni fajl Izvestaj.txt"<<endl;
+    K.Izvestaj();
     return 0;
 }

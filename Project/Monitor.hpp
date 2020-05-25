@@ -84,7 +84,7 @@ public:
             return "OFF";
         else if (s==3)
             return "TEST";
-        else if (s==4)
+        else
             return "STANDBY";
     }
     string Rget()const
@@ -93,7 +93,7 @@ public:
             return "Rezim stednje";
         else if (R==2)
             return "Gameing rezim";
-        else if (R==3)
+        else
             return "Standardni rezim";
     }
     void ispisivanje()

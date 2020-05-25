@@ -49,23 +49,6 @@ public:
     {
         return broj;
     }
-    void pisiTxt(char mode='w')
-    {
-        ofstream fajl;
-        if (mode=='a')
-        {
-            fajl.open ("Programi.txt", ios_base::app);
-        }
-        else
-        {
-            fajl.open ("Programi.txt");
-        }
-        string tekst;
-        cin>>tekst;
-        fajl << tekst << endl;
-        fajl.close();
-
-    }
     void kat()
     {
         if (k==igrica)
@@ -112,9 +95,6 @@ public:
         izlaz<<p.odredi();
         return izlaz;
     }
-
-
-
 };
 
 

@@ -1,10 +1,10 @@
 izvestaj kompijutera
 Monitor - ispis
 Minimalna rezolucija je : 1
-Trenutna rezolucija je : 7
+Trenutna rezolucija je : 5
 Maksimalna rezolucija je : 10
 
-Osvetljenje je 50
+Osvetljenje je 550
 
 stanje monitora je OFF
 Rezim monitora je Gameing rezim
@@ -19,11 +19,12 @@ soket je : TR4
 Trenutna brzina je 12
 Maksimalna brzina 20
 
-minimalna snaga zvucnika je :7404880
+minimalna snaga zvucnika je :10
 Zvucnici su na:5
 
-Tip operativnog sistema je Windows
+Tip operativnog sistema je Linux
 Operativni sistem ima 64 bita
 
 Dostupni programi su :
-3,3,aplikacija
+Mint,2,kod
+lol,2,igrica

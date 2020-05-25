@@ -28,6 +28,17 @@ vector<string> splitSen(string str)
     return v;
 }
 
+bool prazanFajl(string nazivFajla)
+{
+    ifstream fajl(nazivFajla);
+    string c;
+    fajl >> c;
+    if(c.empty())
+        return true;
+    else
+        return false;
+}
+
 class Komp
 {
 public:
@@ -41,11 +52,11 @@ public:
 public:
     Komp(int H,int k1=1,int k2=2,int k3=2,int k4=2,int k5=2,int k6=2,int k7=2,int k8=2,int k9=2,int k10=2,int k11=2,double d1=2,double d2=2,rezim e1=GAMEING,soket e2=AM4,tip e3=linux,biti e4=tupe1,string s1="Windows7"):Mon(e1,k1,k2,k3,k4),Pro(k5,d1,d2,k6,k7,e2),Kul(k8,k9),Zvu(k10,k11),Ops(H,e3,e4,s1)
     {
+        if(!prazanFajl("Programi.txt")) izfajlauvektor("Programi.txt");
+        if(!prazanFajl("Particija1.txt")) izfajlauvektor("Particija1.txt");
+        if(!prazanFajl("Particija2.txt")) izfajlauvektor("Particija2.txt");
         particije.resize(3);
-        instalacija(2,kod,s1,'w',H);
-        izbaci(s1);
-        izfajlauvektor("Programi.txt");
-
+        instalacija(2,kod,s1,'w',H-1);
     }
     Komp(const Komp &K):Mon(K.Mon),Pro(K.Pro),Kul(K.Kul),Zvu(K.Zvu),Ops(K.Ops)
     {
@@ -63,24 +74,24 @@ public:
     void instalacija(int X,kategorija Y,string P, char mode,int a)
     {
 
-            particije.at(a).setP(particije.at(a).getP()+X);
-            Program programcic(a,X,Y,P);
-            string nazivfajla;
-            dodaj(programcic);
-            if(a==0)
-                nazivfajla="Programi.txt";
-            else if(a==1)
-                nazivfajla="Particija1.txt";
-            else
-                nazivfajla="Particija2.txt";
-            if(mode== 'a')
-            {
-                upisiprograme(nazivfajla,'a');
-            }
-            else
-            {
-                upisiprograme(nazivfajla);
-            }
+        particije.at(a).setP(particije.at(a).getP()+X);
+        Program programcic(a,X,Y,P);
+        string nazivfajla;
+        dodaj(programcic);
+        if(a==0)
+            nazivfajla="Programi.txt";
+        else if(a==1)
+            nazivfajla="Particija1.txt";
+        else
+            nazivfajla="Particija2.txt";
+        if(mode== 'a')
+        {
+            upisiprograme(nazivfajla,'a');
+        }
+        else
+        {
+            upisiprograme(nazivfajla);
+        }
     }
     void izbaci(string line="")
     {
@@ -151,22 +162,27 @@ public:
 
         }
     }
-  /*  void izbrisisve()
-    {
-        ofstream fajl;
-        fajl.open("Programi.txt");
-        fajl<<"";
-        fajl.close();
-    }*/
     void upisiprograme(string nazivFajla,char mode='w')
     {
-       // izbrisisve();
         int O;
-        if(nazivFajla=="Programi.txt"){O==0;}
-        else if (nazivFajla=="Particija1.txt") {O==1;}
-        else {O=2;}
+        if(nazivFajla=="Programi.txt")
+        {
+            O=0;
+        }
+        else if (nazivFajla=="Particija1.txt")
+        {
+            O=1;
+        }
+        else if (nazivFajla=="Particija2.txt")
+        {
+            O=2;
+        }
+        else
+        {
+            O=3;
+        }
         ofstream fajl;
-        if (mode=='a')
+        if (mode=='a' && !prazanFajl(nazivFajla))
         {
             fajl.open (nazivFajla, ios_base::app);
         }
@@ -176,7 +192,7 @@ public:
         }
         for(auto i = programi.begin(); i != programi.end(); i++)
         {
-            if(i->getpart()==O)
+            if(i->getpart()==O || O==3)
             {
                 fajl<<*i<<endl;
             }

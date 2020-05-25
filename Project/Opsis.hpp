@@ -54,7 +54,7 @@ public:
             return "Windows";
         else if (t==2)
             return "Linux";
-        else if (t==3)
+        else
             return "Mac";
     }
        friend ostream&operator<<(ostream&izlaz,const Opsis& O)

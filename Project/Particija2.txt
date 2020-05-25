@@ -1,2 +1,1 @@
-
-3,3,aplikacija
+Mint,2,kod
