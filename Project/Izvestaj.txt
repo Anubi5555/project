@@ -1,33 +1,29 @@
 izvestaj kompijutera
 Monitor - ispis
 Minimalna rezolucija je : 1
-Trenutna rezolucija je : 2
+Trenutna rezolucija je : 7
 Maksimalna rezolucija je : 10
 
-Osvetljenje je 2
+Osvetljenje je 50
 
 stanje monitora je OFF
 Rezim monitora je Gameing rezim
 
-Broj jezgara 2
-Bazna frakvencija 2
-Pojacana frekvencija 2
-Dobra temperatura je 2
-Prevelika temperatura je 2
+Broj jezgara 12
+Bazna frakvencija 3
+Pojacana frekvencija 5
+Dobra temperatura je 60
+Prevelika temperatura je 100
 soket je : TR4
 
-Trenutna brzina je 2
-Maksimalna brzina 2
+Trenutna brzina je 12
+Maksimalna brzina 20
 
-minimalna snaga zvucnika je :2
-Zvucnici su na:2
+minimalna snaga zvucnika je :7404880
+Zvucnici su na:5
 
-Tip operativnog sistema je Linux
+Tip operativnog sistema je Windows
 Operativni sistem ima 64 bita
 
-Kapacitet diska 7404928
-Popunjeno 14
-
 Dostupni programi su :
-x,2,kod
-c,12,aplikacija
+3,3,aplikacija

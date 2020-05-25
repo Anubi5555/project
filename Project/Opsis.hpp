@@ -11,7 +11,7 @@ private:
     tip t;
     biti b;
 public:
-    Opsis(tip x=windiws,biti y=tupe1,string W="Windows 7"):Program(2,kod,W)
+    Opsis(int X,tip x=windiws,biti y=tupe1,string W="Windows 7"):Program(X,2,kod,W)
     {
         t=x;
         b=y;

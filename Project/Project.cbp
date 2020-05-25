@@ -40,6 +40,8 @@
 		<Unit filename="Memorija.hpp" />
 		<Unit filename="Monitor.hpp" />
 		<Unit filename="Opsis.hpp" />
+		<Unit filename="Particija1.txt" />
+		<Unit filename="Particija2.txt" />
 		<Unit filename="Procesor.hpp" />
 		<Unit filename="Program.hpp" />
 		<Unit filename="Programi.txt" />

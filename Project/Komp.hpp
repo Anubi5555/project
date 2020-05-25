@@ -36,51 +36,51 @@ public:
     Kuler Kul;
     Zvucnici Zvu;
     Opsis Ops;
-    Memorija Mem;
+    vector  <Memorija> particije;
     vector <Program> programi;
 public:
-    Komp(int k1=1,int k2=2,int k3=2,int k4=2,int k5=2,int k6=2,int k7=2,int k8=2,int k9=2,int k10=2,int k11=2,int k12=12,int k13=2,double d1=2,double d2=2,rezim e1=GAMEING,soket e2=AM4,tip e3=linux,biti e4=tupe1,string s1="Windows7"):Mon(e1,k1,k2,k3,k4),Pro(k5,d1,d2,k6,k7,e2),Kul(k8,k9),Zvu(k10,k11),Ops(e3,e4,s1),Mem(k12,k13)
+    Komp(int H,int k1=1,int k2=2,int k3=2,int k4=2,int k5=2,int k6=2,int k7=2,int k8=2,int k9=2,int k10=2,int k11=2,double d1=2,double d2=2,rezim e1=GAMEING,soket e2=AM4,tip e3=linux,biti e4=tupe1,string s1="Windows7"):Mon(e1,k1,k2,k3,k4),Pro(k5,d1,d2,k6,k7,e2),Kul(k8,k9),Zvu(k10,k11),Ops(H,e3,e4,s1)
     {
-        instalacija(2,kod,s1,'w');
+        particije.resize(3);
+        instalacija(2,kod,s1,'w',H);
         izbaci(s1);
         izfajlauvektor("Programi.txt");
 
     }
-    Komp(const Komp &K):Mon(K.Mon),Pro(K.Pro),Kul(K.Kul),Zvu(K.Zvu),Ops(K.Ops),Mem(K.Mem)
+    Komp(const Komp &K):Mon(K.Mon),Pro(K.Pro),Kul(K.Kul),Zvu(K.Zvu),Ops(K.Ops)
     {
 
-    }
-    int getkk()const
-    {
-        return Mem.getK();
     }
     string getimeo()const
     {
         return Ops.getimeop();
     }
-    vector <Program> getsve()const
-    {
-        return programi;
-    }
+
     void dodaj(Program &P)
     {
         programi.push_back(P);
     }
-    void instalacija(int X,kategorija Y,string P, char mode)
+    void instalacija(int X,kategorija Y,string P, char mode,int a)
     {
-        if (Mem.getK() >= Mem.getP()+X)
-        {
-            Mem.setP(Mem.getP()+X);
-            Program programcic(X,Y,P);
-            dodaj(programcic);
-            if(mode== 'a'){upisiprograme('a');}
-            else{upisiprograme('w');}
-        }
-        else if (Mem.getK() <= Mem.getP()+X)
-        {
-            cout<<"Greska : Nema dovoljno prostora"<<endl;
 
-        }
+            particije.at(a).setP(particije.at(a).getP()+X);
+            Program programcic(a,X,Y,P);
+            string nazivfajla;
+            dodaj(programcic);
+            if(a==0)
+                nazivfajla="Programi.txt";
+            else if(a==1)
+                nazivfajla="Particija1.txt";
+            else
+                nazivfajla="Particija2.txt";
+            if(mode== 'a')
+            {
+                upisiprograme(nazivfajla,'a');
+            }
+            else
+            {
+                upisiprograme(nazivfajla);
+            }
     }
     void izbaci(string line="")
     {
@@ -106,9 +106,31 @@ public:
             }
         cout << line << " nije obrisan" << endl;
     }
+    void obrisimem()
+    {
+        string line;
+        fflush(stdin);
+        getline(cin,line);
+        for(auto i = particije.begin(); i != particije.end(); i++)
+            for(auto o = programi.begin(); o != programi.end(); o++)
+            {
+                if (o -> getIme() == line)
+                {
+                    programi.erase(o);
+                    cout << line << " je obrisan" << endl;
+                    return;
+                }
+                cout << line << " nije obrisan" << endl;
+            }
+    }
     void ispisprograma()
     {
         for(auto i = programi.begin(); i != programi.end(); i++)
+            cout<<*i<<endl;
+    }
+    void ispisprogramamem()
+    {
+        for(auto i = particije.begin(); i != particije.end(); i++)
             cout<<*i<<endl;
     }
     void pretraga()
@@ -116,61 +138,59 @@ public:
         string line;
         fflush(stdin);
         getline(cin,line);
-        for(auto i = programi.begin(); i != programi.end(); i++)
-            if (i -> getIme() == line)
+        for(auto i = particije.begin(); i != particije.end(); i++)
+        {
+
+            for(auto o = programi.begin(); o != programi.end(); o++)
             {
-                cout << *i << endl;
+                if (o -> getIme() == line)
+                {
+                    cout << *o << endl;
+                }
             }
+
+        }
     }
-    void izbrisisve()
+  /*  void izbrisisve()
     {
         ofstream fajl;
         fajl.open("Programi.txt");
         fajl<<"";
         fajl.close();
-    }
-
-        void upisiprograme(char mode='w')
+    }*/
+    void upisiprograme(string nazivFajla,char mode='w')
     {
-        izbrisisve();
-            ofstream fajl;
-            if (mode=='a')
-            {
-                fajl.open ("Programi.txt", ios_base::app);
-            }
-            else
-            {
-                fajl.open ("Programi.txt");
-            }
-            for(auto i = programi.begin(); i != programi.end(); i++)
+       // izbrisisve();
+        int O;
+        if(nazivFajla=="Programi.txt"){O==0;}
+        else if (nazivFajla=="Particija1.txt") {O==1;}
+        else {O=2;}
+        ofstream fajl;
+        if (mode=='a')
+        {
+            fajl.open (nazivFajla, ios_base::app);
+        }
+        else
+        {
+            fajl.open (nazivFajla);
+        }
+        for(auto i = programi.begin(); i != programi.end(); i++)
+        {
+            if(i->getpart()==O)
             {
                 fajl<<*i<<endl;
             }
 
-            fajl.close();
+        }
+
+        fajl.close();
 
     }
-          void upisiprogramei(char mode='w')
+    void upisibassve()
     {
-        izbrisisve();
-            ofstream fajl;
-            if (mode=='a')
-            {
-                fajl.open ("Izvestaj.txt", ios_base::app);
-            }
-            else
-            {
-                fajl.open ("Izvestaj.txt");
-            }
-            for(auto i = programi.begin(); i != programi.end(); i++)
-            {
-                fajl<<*i<<endl;
-            }
-
-            fajl.close();
-
-
-
+        upisiprograme("Programi.txt");
+        upisiprograme("Particija1.txt");
+        upisiprograme("Particija2.txt");
     }
     void Txtss(string nazivFajla,int pok, char mode='w')
     {
@@ -193,8 +213,6 @@ public:
             fajl << Zvu<<endl;
         else if(pok==5)
             fajl <<Ops<< endl;
-        else if(pok==6)
-            fajl <<Mem<< endl;
         fajl.close();
     }
     void pisiTxte(char mode='w',string K="NONE")
@@ -221,7 +239,7 @@ public:
         for(i=1; i<7; i++)
             Txtss("Izvestaj.txt",i,'a');
         pisiTxte('a',"Dostupni programi su :");
-        upisiprogramei('a');
+        upisiprograme("Izvestaj.txt",'a');
     }
     void citaajTxt()
     {
@@ -251,6 +269,7 @@ public:
             while ( getline (fajl,linija) )
             {
                 vector<string> rez;
+                int V;
                 rez = splitSen(linija);
                 if(rez[2]=="igrica")
                 {
@@ -264,7 +283,19 @@ public:
                 {
                     kat=aplikacija;
                 }
-                Program o(stoi(rez[1].c_str()),kat,rez[0]);
+                if(nazivFajla=="Programi.txt")
+                {
+                    V=0;
+                }
+                else if (nazivFajla=="Particija1.txt")
+                {
+                    V=1;
+                }
+                else
+                {
+                    V=2;
+                }
+                Program o(V,stoi(rez[1].c_str()),kat,rez[0]);
                 programi.push_back(o);
             }
 

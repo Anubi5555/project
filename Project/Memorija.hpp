@@ -30,12 +30,12 @@ public:
     {
         popunjeno=a;
     }
-     void instaliraj(int X,kategorija Y,string P)
+     void instaliraj(int X,kategorija Y,string P,int a)
     {
         if (kapacitet >= popunjeno+X)
         {
             popunjeno=popunjeno+X;
-            Program novi(X,Y,P);
+            Program novi(a,X,Y,P);
             string H,M,K;
             M="";
             if(Y==1)

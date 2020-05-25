@@ -10,14 +10,16 @@ protected:
     string naziv;
     int zauzima;
     kategorija k;
+    int gde;
     static int broj;
 public:
-    Program(int x=1,kategorija y=kod,string p="unnamed")
+    Program(int gdesam,int x=1,kategorija y=kod,string p="unnamed")
     {
         zauzima=x;
         k=y;
         naziv=p;
         broj++;
+        gde=gdesam;
     }
     Program(const Program &x2)
     {
@@ -25,10 +27,15 @@ public:
         zauzima=x2.zauzima;
         k=x2.k;
         broj++;
+        gde=x2.gde;
     }
     ~Program()
     {
         broj--;
+    }
+    int getpart()const
+    {
+        return gde;
     }
     string getIme()const
     {

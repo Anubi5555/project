@@ -11,7 +11,7 @@ using namespace std;
 int Program::broj=0;
 Komp kreiranje()
 {
-    int niz[12];
+    int niz[11];
     double db1,db2;
     rezim x;
     soket y;
@@ -137,22 +137,21 @@ Komp kreiranje()
         break;
     }
     }
+    int a;
+    cout<<"unesite 1 da instalirate u Programi.txt"<<endl;
+            cout<<"unesite 2 da instalirate u Particija1.txt"<<endl;
+            cout<<"unesite 3 da instalirate u particija2.txt"<<endl;
+            cin>>a;
     cout<<"unesite naziv svog operativnog sistema"<<endl;
     cin>>naziv;
-    cout<<"unosite memoriju"<<endl;
-    cout<<"unesite koliko memorije ima na disku"<<endl;
-    cin>>niz[12];
-    cout<<"koliko je od tog kapaciteta popunjeno"<<endl;
-    int mmm;
-    cin>>mmm;
-    Komp racunar(niz[1],niz[2],niz[4],niz[3],niz[5],niz[6],niz[7],niz[8],niz[9],niz[10],niz[11],niz[12],mmm,db1,db2,x,y,z,j,naziv);
+    Komp racunar(a,niz[1],niz[2],niz[4],niz[3],niz[5],niz[6],niz[7],niz[8],niz[9],niz[10],niz[11],db1,db2,x,y,z,j,naziv);
     return racunar;
 }
 void obrisi_program(Komp &KK)
 {
     cout<<"UPISITE NAZIV PROGRAMA KOJI ZELITE DA OBRISETE"<<endl;
     KK.obrisi();
-    KK.upisiprograme();
+    KK.upisibassve();
 }
 int main()
 {
@@ -163,26 +162,20 @@ int main()
     {
         cout<<endl<<endl<<endl;
         cout<<"=========================="<<endl;
-        cout<<"Dodavanje memorije"<<"  "<<"1"<<endl;
-        cout<<"Brisanje programa"<<"  "<<"2"<<endl;
-        cout<<"Instalacija programa"<<"  "<<"3"<<endl;
-        cout<<"Uvid u dostupne programe"<<"  "<<"4"<<endl;
-        cout<<"Ispis izvestaja vaseg racunara"<<"  "<<"5"<<endl;
+        cout<<"Brisanje programa"<<"  "<<"1"<<endl;
+        cout<<"Instalacija programa"<<"  "<<"2"<<endl;
+        cout<<"Uvid u dostupne programe"<<"  "<<"3"<<endl;
+        cout<<"Ispis izvestaja vaseg racunara"<<"  "<<"4"<<endl;
         cout<<"Da izadjete iz programa unesite 0"<<endl;
         cin>>korisnikov_broj;
         switch(korisnikov_broj)
         {
         case 1:
         {
-
-            break;
-        }
-        case 2:
-        {
             obrisi_program(K);
             break;
         }
-        case 3:
+        case 2:
         {
             cout<<"unesite naziv programa koji zelite da instalirate"<<endl;
             string str;
@@ -209,16 +202,22 @@ int main()
             cout<<"unesite koliko vas zeljeni program zauzima"<<endl;
             int x;
             cin>> x;
-            K.instalacija(x,l,str,'a');
+            int m;
+            string nazivfajla;
+            cout<<"unesite 1 da instalirate u Programi.txt"<<endl;
+            cout<<"unesite 2 da instalirate u Particija1.txt"<<endl;
+            cout<<"unesite 3 da instalirate u particija2.txt"<<endl;
+            cin>>a;
+            K.instalacija(x,l,str,'a',a-1);
             break;
         }
-        case 4:
+        case 3:
         {
             cout<<"Dostupni programi na racunaru su"<<endl;
             K.ispisprograma();
             break;
         }
-        case 5:
+        case 4:
         {
             cout<<"Izvestaj je upisan u tekstualni fajl Izvestaj.txt"<<endl;
             K.Izvestaj();
