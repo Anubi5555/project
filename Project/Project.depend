@@ -54,7 +54,7 @@
 	"Memorija.hpp"
 	<vector>
 
-1590406925 source:c:\users\racunar\desktop\project\project\main.cpp
+1590410783 source:c:\users\racunar\desktop\project\project\main.cpp
 	<iostream>
 	<string>
 	<fstream>
@@ -70,7 +70,7 @@
 
 1590391808 c:\users\racunar\desktop\project\project\grafika.hpp
 
-1590394466 c:\users\racunar\desktop\project\project\memorija.hpp
+1590410494 c:\users\racunar\desktop\project\project\memorija.hpp
 	"Program.hpp"
 
 1590355055 c:\users\racunar\desktop\project\project\program.hpp
@@ -85,7 +85,7 @@
 1590406483 c:\users\racunar\desktop\project\project\zvucnici.hpp
 	<string>
 
-1590406010 c:\users\racunar\desktop\project\project\komp.hpp
+1590411294 c:\users\racunar\desktop\project\project\komp.hpp
 	"Monitor.hpp"
 	"Procesor.hpp"
 	"Kuler.hpp"

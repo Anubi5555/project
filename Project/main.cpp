@@ -172,6 +172,11 @@ int main()
         cin>>korisnikov_broj;
         switch(korisnikov_broj)
         {
+        case 1:
+        {
+
+            break;
+        }
         case 2:
         {
             obrisi_program(K);

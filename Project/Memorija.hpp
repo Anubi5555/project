@@ -96,8 +96,8 @@ void citajTxt()
     }
     friend ostream&operator<<(ostream&izlaz,const Memorija& M)
     {
-        izlaz<<"Kapacitet diska"<<M.kapacitet<<endl;
-        izlaz<<"Popunjeno"<<M.popunjeno<<endl;
+        izlaz<<"Kapacitet diska "<<M.kapacitet<<endl;
+        izlaz<<"Popunjeno "<<M.popunjeno<<endl;
         return izlaz;
     }
 };

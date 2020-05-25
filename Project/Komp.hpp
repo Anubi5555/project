@@ -44,10 +44,15 @@ public:
         instalacija(2,kod,s1,'w');
         izbaci(s1);
         izfajlauvektor("Programi.txt");
+
     }
     Komp(const Komp &K):Mon(K.Mon),Pro(K.Pro),Kul(K.Kul),Zvu(K.Zvu),Ops(K.Ops),Mem(K.Mem)
     {
 
+    }
+    int getkk()const
+    {
+        return Mem.getK();
     }
     string getimeo()const
     {
@@ -121,14 +126,13 @@ public:
     {
         ofstream fajl;
         fajl.open("Programi.txt");
+        fajl<<"";
         fajl.close();
     }
 
         void upisiprograme(char mode='w')
     {
         izbrisisve();
-        for(auto i = programi.begin(); i != programi.end(); i++)
-        {
             ofstream fajl;
             if (mode=='a')
             {
@@ -144,8 +148,6 @@ public:
             }
 
             fajl.close();
-
-        }
 
     }
           void upisiprogramei(char mode='w')
@@ -244,7 +246,6 @@ public:
     void izfajlauvektor(string nazivFajla)
     {
         string linija;
-        cout<<"pokusaj 1"<<endl;
         kategorija kat;
         ifstream fajl (nazivFajla);
         if (fajl.is_open())
