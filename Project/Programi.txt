@@ -1,1 +1,9 @@
-Windows3,2,kod
+MishaOS,2,kod
+Minecraft,20,igrica
+PS,400,aplikacija
+MishaOS,2,kod
+Minecraft,20,igrica
+PS,400,aplikacija
+MishaOS,2,kod
+Minecraft,20,igrica
+PS,400,aplikacija

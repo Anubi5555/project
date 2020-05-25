@@ -35,8 +35,7 @@ public:
     }
    friend ostream&operator<<(ostream&izlaz,const Zvucnici& z)
     {
-        izlaz<<"Zvucnici - ispis"<<endl;
-        izlaz<<"Minimalna snaga zvucnika je :"<<z.minzvuk<<endl;
+        izlaz<<"minimalna snaga zvucnika je :"<<z.minzvuk<<endl;
         izlaz<<"Zvucnici su na:"<<z.tzvuk<<endl;
 
         return izlaz;

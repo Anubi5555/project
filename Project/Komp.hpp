@@ -148,29 +148,19 @@ public:
         }
 
     }
- /*   bool prazanFajle(string nazivFajla)
+          void upisiprogramei(char mode='w')
     {
-        ifstream fajl(nazivFajla);
-        string c;
-        fajl >> c;
-        cout << c;
-        if(c.empty())
-            return true;
-        else
-            return false;
-    }
-    void upisiprograme()
-    {
+        izbrisisve();
         for(auto i = programi.begin(); i != programi.end(); i++)
         {
             ofstream fajl;
-            if (!prazanFajle("Programi.txt"))
+            if (mode=='a')
             {
-                fajl.open ("Programi.txt", ios_base::app);
+                fajl.open ("Izvestaj.txt", ios_base::app);
             }
             else
             {
-                fajl.open ("Programi.txt");
+                fajl.open ("Izvestaj.txt");
             }
             for(auto i = programi.begin(); i != programi.end(); i++)
             {
@@ -182,7 +172,7 @@ public:
         }
 
     }
- */   void Txtss(string nazivFajla,int pok, char mode='w')
+    void Txtss(string nazivFajla,int pok, char mode='w')
     {
         ofstream fajl;
         if (mode=='a')
@@ -200,8 +190,10 @@ public:
         else if(pok==3)
             fajl << Kul<< endl;
         else if(pok==4)
-            fajl <<Ops<< endl;
+            fajl << Zvu<<endl;
         else if(pok==5)
+            fajl <<Ops<< endl;
+        else if(pok==6)
             fajl <<Mem<< endl;
         fajl.close();
     }
@@ -226,7 +218,7 @@ public:
     {
         pisiTxte('w',"izvestaj kompijutera");
         int i;
-        for(i=1; i<6; i++)
+        for(i=1; i<7; i++)
             Txtss("Izvestaj.txt",i,'a');
         pisiTxte('a',"Dostupni programi su :");
         upisiprograme('a');
